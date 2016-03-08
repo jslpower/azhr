@@ -1,0 +1,1373 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38E25CAB-79B9-4BEC-A17E-3DD30EA638F3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EyouSoft.WebFX</RootNamespace>
+    <AssemblyName>EyouSoft.WebFX</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Adpost.Common.Office, Version=1.0.3664.30643, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\Adpost.Common.Office.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Web\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptPlan.aspx.cs">
+      <DependentUpon>AcceptPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcceptPlan.aspx.designer.cs">
+      <DependentUpon>AcceptPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptPlanApply.aspx.cs">
+      <DependentUpon>AcceptPlanApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AcceptPlanApply.aspx.designer.cs">
+      <DependentUpon>AcceptPlanApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\string.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>string.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\string.th-th.designer.cs">
+      <DependentUpon>string.th-th.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\string.en-us.designer.cs">
+      <DependentUpon>string.en-us.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Ashx\AjaxSendEmail.ashx.cs">
+      <DependentUpon>AjaxSendEmail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetCityInfo.ashx.cs">
+      <DependentUpon>GetCityInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetOrderSells.ashx.cs">
+      <DependentUpon>GetOrderSells.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\GetProvinceAndCity.ashx.cs">
+      <DependentUpon>GetProvinceAndCity.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ImportSource.ashx.cs">
+      <DependentUpon>ImportSource.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\ValidateCode.ashx.cs">
+      <DependentUpon>ValidateCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\AjaxRequest\AjaxSupplier.aspx.cs">
+      <DependentUpon>AjaxSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\AjaxRequest\AjaxSupplier.aspx.designer.cs">
+      <DependentUpon>AjaxSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\Journey.aspx.cs">
+      <DependentUpon>Journey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\Journey.aspx.designer.cs">
+      <DependentUpon>Journey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\JourneySpot.aspx.cs">
+      <DependentUpon>JourneySpot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\JourneySpot.aspx.designer.cs">
+      <DependentUpon>JourneySpot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\OrderSells.aspx.cs">
+      <DependentUpon>OrderSells.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\OrderSells.aspx.designer.cs">
+      <DependentUpon>OrderSells.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\PriceRemark.aspx.cs">
+      <DependentUpon>PriceRemark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\PriceRemark.aspx.designer.cs">
+      <DependentUpon>PriceRemark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\selectCaiDan.aspx.cs">
+      <DependentUpon>selectCaiDan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\selectCaiDan.aspx.designer.cs">
+      <DependentUpon>selectCaiDan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\selectCity.aspx.cs">
+      <DependentUpon>selectCity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\selectCity.aspx.designer.cs">
+      <DependentUpon>selectCity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\SelectScenic.aspx.cs">
+      <DependentUpon>SelectScenic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\SelectScenic.aspx.designer.cs">
+      <DependentUpon>SelectScenic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\selectScenicPrice.aspx.cs">
+      <DependentUpon>selectScenicPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\selectScenicPrice.aspx.designer.cs">
+      <DependentUpon>selectScenicPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\selectWuPin.aspx.cs">
+      <DependentUpon>selectWuPin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\selectWuPin.aspx.designer.cs">
+      <DependentUpon>selectWuPin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\SetSeat.aspx.cs">
+      <DependentUpon>SetSeat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\SetSeat.aspx.designer.cs">
+      <DependentUpon>SetSeat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\upload.aspx.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\upload.aspx.designer.cs">
+      <DependentUpon>upload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\UserSupplier.aspx.cs">
+      <DependentUpon>UserSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\UserSupplier.aspx.designer.cs">
+      <DependentUpon>UserSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DaYin.aspx.cs">
+      <DependentUpon>DaYin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DaYin.aspx.designer.cs">
+      <DependentUpon>DaYin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialControl.aspx.cs">
+      <DependentUpon>FinancialControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialControl.aspx.designer.cs">
+      <DependentUpon>FinancialControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialRegistration.aspx.cs">
+      <DependentUpon>FinancialRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinancialRegistration.aspx.designer.cs">
+      <DependentUpon>FinancialRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportSource\ImportPage.aspx.cs">
+      <DependentUpon>ImportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportSource\ImportPage.aspx.designer.cs">
+      <DependentUpon>ImportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JieSuan.aspx.cs">
+      <DependentUpon>JieSuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JieSuan.aspx.designer.cs">
+      <DependentUpon>JieSuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logindomain.aspx.cs">
+      <DependentUpon>logindomain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logindomain.aspx.designer.cs">
+      <DependentUpon>logindomain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Print.Master.cs">
+      <DependentUpon>Print.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Print.Master.designer.cs">
+      <DependentUpon>Print.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MyOrder.aspx.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyOrder.aspx.designer.cs">
+      <DependentUpon>MyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeInfo.aspx.cs">
+      <DependentUpon>NoticeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoticeInfo.aspx.designer.cs">
+      <DependentUpon>NoticeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSee.aspx.cs">
+      <DependentUpon>OrderSee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderSee.aspx.designer.cs">
+      <DependentUpon>OrderSee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\QuoteDetail.aspx.cs">
+      <DependentUpon>QuoteDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage\QuoteDetail.aspx.designer.cs">
+      <DependentUpon>QuoteDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\QuoteSimple.aspx.cs">
+      <DependentUpon>QuoteSimple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage\QuoteSimple.aspx.designer.cs">
+      <DependentUpon>QuoteSimple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\Voucher.aspx.cs">
+      <DependentUpon>Voucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage\Voucher.aspx.designer.cs">
+      <DependentUpon>Voucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\XingChengDan.aspx.cs">
+      <DependentUpon>XingChengDan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage\XingChengDan.aspx.designer.cs">
+      <DependentUpon>XingChengDan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\xz\fxs\dingdanxinxi.aspx.cs">
+      <DependentUpon>dingdanxinxi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage\xz\fxs\dingdanxinxi.aspx.designer.cs">
+      <DependentUpon>dingdanxinxi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\xz\fxs\sanpin.aspx.cs">
+      <DependentUpon>sanpin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage\xz\fxs\sanpin.aspx.designer.cs">
+      <DependentUpon>sanpin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPage\xz\fxs\youkexinxi.aspx.cs">
+      <DependentUpon>youkexinxi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintPage\xz\fxs\youkexinxi.aspx.designer.cs">
+      <DependentUpon>youkexinxi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravellerInsurance.aspx.cs">
+      <DependentUpon>TravellerInsurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravellerInsurance.aspx.designer.cs">
+      <DependentUpon>TravellerInsurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Give.ascx.cs">
+      <DependentUpon>Give.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Give.ascx.designer.cs">
+      <DependentUpon>Give.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Journey.ascx.cs">
+      <DependentUpon>Journey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Journey.ascx.designer.cs">
+      <DependentUpon>Journey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\PriceStand.ascx.cs">
+      <DependentUpon>PriceStand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\PriceStand.ascx.designer.cs">
+      <DependentUpon>PriceStand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\selectFWeiCan.ascx.cs">
+      <DependentUpon>selectFWeiCan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\selectFWeiCan.ascx.designer.cs">
+      <DependentUpon>selectFWeiCan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectJourneySpot.ascx.cs">
+      <DependentUpon>SelectJourneySpot.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectJourneySpot.ascx.designer.cs">
+      <DependentUpon>SelectJourneySpot.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelectPriceRemark.ascx.cs">
+      <DependentUpon>SelectPriceRemark.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelectPriceRemark.ascx.designer.cs">
+      <DependentUpon>SelectPriceRemark.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SelfPay.ascx.cs">
+      <DependentUpon>SelfPay.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SelfPay.ascx.designer.cs">
+      <DependentUpon>SelfPay.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SellsSelect.ascx.cs">
+      <DependentUpon>SellsSelect.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SellsSelect.ascx.designer.cs">
+      <DependentUpon>SellsSelect.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SendEmail.ascx.cs">
+      <DependentUpon>SendEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SendEmail.ascx.designer.cs">
+      <DependentUpon>SendEmail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\SetSeat.ascx.cs">
+      <DependentUpon>SetSeat.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\SetSeat.ascx.designer.cs">
+      <DependentUpon>SetSeat.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Tip.ascx.cs">
+      <DependentUpon>Tip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Tip.ascx.designer.cs">
+      <DependentUpon>Tip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TravelControl.ascx.cs">
+      <DependentUpon>TravelControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TravelControl.ascx.designer.cs">
+      <DependentUpon>TravelControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TravelControlS.ascx.cs">
+      <DependentUpon>TravelControlS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\TravelControlS.ascx.designer.cs">
+      <DependentUpon>TravelControlS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UploadControl.ascx.cs">
+      <DependentUpon>UploadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UploadControl.ascx.designer.cs">
+      <DependentUpon>UploadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="XianLu.aspx.cs">
+      <DependentUpon>XianLu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XianLu.aspx.designer.cs">
+      <DependentUpon>XianLu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XunJia.aspx.cs">
+      <DependentUpon>XunJia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\DistributorNotice.ascx.cs">
+      <DependentUpon>DistributorNotice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\DistributorNotice.ascx.designer.cs">
+      <DependentUpon>DistributorNotice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\HeadDistributorControl.ascx.cs">
+      <DependentUpon>HeadDistributorControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\HeadDistributorControl.ascx.designer.cs">
+      <DependentUpon>HeadDistributorControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="XunJia.aspx.designer.cs">
+      <DependentUpon>XunJia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XunJiaEdit.aspx.cs">
+      <DependentUpon>XunJiaEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XunJiaEdit.aspx.designer.cs">
+      <DependentUpon>XunJiaEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YongHu.aspx.cs">
+      <DependentUpon>YongHu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YongHu.aspx.designer.cs">
+      <DependentUpon>YongHu.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\boxynew.css" />
+    <Content Include="Css\fx_style.css" />
+    <Content Include="Css\jquery.autocomplete.css" />
+    <Content Include="Css\print.css" />
+    <Content Include="Css\style.css" />
+    <Content Include="Css\style_1.css" />
+    <Content Include="Css\style_2.css" />
+    <Content Include="Css\style_3.css" />
+    <Content Include="Css\swfupload\default.css" />
+    <Content Include="Login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="XunJia.aspx" />
+    <Content Include="Images\add-qjg-cy.gif" />
+    <Content Include="Images\add-sjg-cy.gif" />
+    <Content Include="Images\addbigboxtopbj.gif" />
+    <Content Include="Images\addicon.gif" />
+    <Content Include="Images\addimg.gif" />
+    <Content Include="Images\alertboxtopbg.gif" />
+    <Content Include="Images\anniured-cy.gif" />
+    <Content Include="Images\anpai-line.gif" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\backbg-in.gif" />
+    <Content Include="Images\backbg.gif" />
+    <Content Include="Images\banner-touy.gif" />
+    <Content Include="Images\banner01.jpg" />
+    <Content Include="Images\banner02.jpg" />
+    <Content Include="Images\banner03.jpg" />
+    <Content Include="Images\banner04.jpg" />
+    <Content Include="Images\banner05.jpg" />
+    <Content Include="Images\banner06.jpg" />
+    <Content Include="Images\baocun.gif" />
+    <Content Include="Images\baocunimg.gif" />
+    <Content Include="Images\baozhang-cy.gif" />
+    <Content Include="Images\bei.jpg" />
+    <Content Include="Images\bg_26.gif" />
+    <Content Include="Images\biaotibg.gif" />
+    <Content Include="Images\bot_xian.gif" />
+    <Content Include="Images\box-images\closebox.gif" />
+    <Content Include="Images\box-images\closebox2.gif" />
+    <Content Include="Images\box-images\h2bg.gif" />
+    <Content Include="Images\box-images\publishLay.gif" />
+    <Content Include="Images\buchl_btn.gif" />
+    <Content Include="Images\can-hui.gif" />
+    <Content Include="Images\can.gif" />
+    <Content Include="Images\caozuo-left.gif" />
+    <Content Include="Images\caozuo-right.gif" />
+    <Content Include="Images\car.gif" />
+    <Content Include="Images\car_leftbg.gif" />
+    <Content Include="Images\car_rightbg.gif" />
+    <Content Include="Images\car_style.gif" />
+    <Content Include="Images\cente02-cy.gif" />
+    <Content Include="Images\center_l.gif" />
+    <Content Include="Images\center_r.gif" />
+    <Content Include="Images\cha.gif" />
+    <Content Include="Images\chakan.gif" />
+    <Content Include="Images\charuimg.gif" />
+    <Content Include="Images\che-hui.gif" />
+    <Content Include="Images\che.gif" />
+    <Content Include="Images\chengren.gif" />
+    <Content Include="Images\chexin-leftbtn.gif" />
+    <Content Include="Images\chexin-rightbtn.gif" />
+    <Content Include="Images\child.gif" />
+    <Content Include="Images\chuan-hui.gif" />
+    <Content Include="Images\chuan.gif" />
+    <Content Include="Images\cishu-cy.gif" />
+    <Content Include="Images\closeimg.gif" />
+    <Content Include="Images\cun-cy.gif" />
+    <Content Include="Images\cx.gif" />
+    <Content Include="Images\dao-hui.gif" />
+    <Content Include="Images\dao.gif" />
+    <Content Include="Images\daochu-all.gif" />
+    <Content Include="Images\daochu-cy.gif" />
+    <Content Include="Images\daochu-excle.gif" />
+    <Content Include="Images\daorumd-cy.gif" />
+    <Content Include="Images\dayin1-cy.gif" />
+    <Content Include="Images\default.jpg" />
+    <Content Include="Images\delimg.gif" />
+    <Content Include="Images\deng.gif" />
+    <Content Include="Images\dx-chongzhi.gif" />
+    <Content Include="Images\dy-center\daoq.gif" />
+    <Content Include="Images\dy-center\daoqi.gif" />
+    <Content Include="Images\dy-center\daoqiq.gif" />
+    <Content Include="Images\dy-center\daoshang.gif" />
+    <Content Include="Images\dy-center\daoshangq.gif" />
+    <Content Include="Images\dy-center\daoshangxia.gif" />
+    <Content Include="Images\dy-center\daoshangxiaq.gif" />
+    <Content Include="Images\dy-center\daoxia.gif" />
+    <Content Include="Images\dy-center\daoxiaq.gif" />
+    <Content Include="Images\dy-center\jia.gif" />
+    <Content Include="Images\dy-center\ting.gif" />
+    <Content Include="Images\edietimg.gif" />
+    <Content Include="Images\editimg-k.gif" />
+    <Content Include="Images\editimg.gif" />
+    <Content Include="Images\Exit.gif" />
+    <Content Include="Images\fan.gif" />
+    <Content Include="Images\fang-hui.gif" />
+    <Content Include="Images\fang.gif" />
+    <Content Include="Images\feij.gif" />
+    <Content Include="Images\footbg.jpg" />
+    <Content Include="Images\footbg1.gif" />
+    <Content Include="Images\footerbg.gif" />
+    <Content Include="Images\footxian-cy.gif" />
+    <Content Include="Images\fromimg01.gif" />
+    <Content Include="Images\fujian.gif" />
+    <Content Include="Images\fx-images\fenxiaoyzm.gif" />
+    <Content Include="Images\fx-images\fenxiasloginbtn.gif" />
+    <Content Include="Images\fx-images\fenxiaspt.gif" />
+    <Content Include="Images\fx-images\fenxiaspt03.gif" />
+    <Content Include="Images\fx-images\fenxiaspt04.gif" />
+    <Content Include="Images\fx-images\fenxiaspt05.gif" />
+    <Content Include="Images\fx-images\fenxiaspt06.gif" />
+    <Content Include="Images\fx-images\fenxiaspt07.gif" />
+    <Content Include="Images\fx-images\fenxiasptloginbottombg.gif" />
+    <Content Include="Images\fx-images\fenxiaspt_left.gif" />
+    <Content Include="Images\fx-images\fenxiaspt_right.gif" />
+    <Content Include="Images\fx-images\fx-bodybg.gif" />
+    <Content Include="Images\fx-images\fxclass01.gif" />
+    <Content Include="Images\fx-images\fxclass02.gif" />
+    <Content Include="Images\fx-images\fxclass03.gif" />
+    <Content Include="Images\fx-images\fxptlo_03.jpg" />
+    <Content Include="Images\fx-images\fxptlo_05.jpg" />
+    <Content Include="Images\fx-images\fxptlo_09.jpg" />
+    <Content Include="Images\fx-images\fxptlo_10.jpg" />
+    <Content Include="Images\fx-images\fxptlo_12.jpg" />
+    <Content Include="Images\fx-images\fxptlo_16.jpg" />
+    <Content Include="Images\fx-images\fxptlo_18.jpg" />
+    <Content Include="Images\fx-images\fxright_botbg.gif" />
+    <Content Include="Images\fx-images\fxright_closebtn.gif" />
+    <Content Include="Images\fx-images\fxright_closebtnhover.gif" />
+    <Content Include="Images\fx-images\fxright_midbg.gif" />
+    <Content Include="Images\fx-images\fxright_topbg.gif" />
+    <Content Include="Images\fx-images\icon.gif" />
+    <Content Include="Images\fx-images\linebg.gif" />
+    <Content Include="Images\fx-images\logo.png" />
+    <Content Include="Images\fx-images\menu-left.gif" />
+    <Content Include="Images\fx-images\meun-right.gif" />
+    <Content Include="Images\fx-images\pubicon.gif" />
+    <Content Include="Images\fx-images\searchbg.gif" />
+    <Content Include="Images\fx-images\textbg.gif" />
+    <Content Include="Images\fx-images\topbg.gif" />
+    <Content Include="Images\fx-images\复件 fx-bodybg.gif" />
+    <Content Include="Images\fxclass01.gif" />
+    <Content Include="Images\fxs-btn.png" />
+    <Content Include="Images\gerenzxmenubg.gif" />
+    <Content Include="Images\gerenzxmenubg02.gif" />
+    <Content Include="Images\google-map.gif" />
+    <Content Include="Images\gr_ckxq.gif" />
+    <Content Include="Images\ht-print-top.gif" />
+    <Content Include="Images\icon.gif" />
+    <Content Include="Images\icon_01.gif" />
+    <Content Include="Images\icon_02.gif" />
+    <Content Include="Images\icon_03.gif" />
+    <Content Include="Images\icon_04.gif" />
+    <Content Include="Images\icon_05.gif" />
+    <Content Include="Images\images\gerenzxmenubg.gif" />
+    <Content Include="Images\images\images\y-jdleftbj01.gif" />
+    <Content Include="Images\images\images\y-jdleftbj02.gif" />
+    <Content Include="Images\images\images\y-jdleftbj03.gif" />
+    <Content Include="Images\images\images\y-jdleftbj04.gif" />
+    <Content Include="Images\images\y-delicon.gif" />
+    <Content Include="Images\images\y-delupdateicon.gif" />
+    <Content Include="Images\images\y-jdleftbj01.gif" />
+    <Content Include="Images\images\y-jdleftbj02.gif" />
+    <Content Include="Images\images\y-jdleftbj03.gif" />
+    <Content Include="Images\images\y-jdleftbj04.gif" />
+    <Content Include="Images\images\y-jdleftbj05.gif" />
+    <Content Include="Images\images\y-kehugl01.gif" />
+    <Content Include="Images\images\y-kehugl02.gif" />
+    <Content Include="Images\images\y-kehugl03.gif" />
+    <Content Include="Images\images\y-kehugl04-left.gif" />
+    <Content Include="Images\images\y-kehugl04-right.gif" />
+    <Content Include="Images\images\y-kehugl04.gif" />
+    <Content Include="Images\images\y-kehugl05.gif" />
+    <Content Include="Images\index_point01-cy.gif" />
+    <Content Include="Images\input-bg.gif" />
+    <Content Include="Images\inputbg.gif" />
+    <Content Include="Images\jian.gif" />
+    <Content Include="Images\jiant1.gif" />
+    <Content Include="Images\jiant2.gif" />
+    <Content Include="Images\jiantou-cy.gif" />
+    <Content Include="Images\jiantou-l-cy.gif" />
+    <Content Include="Images\jiantour.gif" />
+    <Content Include="Images\jidiao-bg.gif" />
+    <Content Include="Images\jidiao-jt.gif" />
+    <Content Include="Images\jidiao-jtx.gif" />
+    <Content Include="Images\jie-hui.gif" />
+    <Content Include="Images\jie.gif" />
+    <Content Include="Images\jing-hui.gif" />
+    <Content Include="Images\jing.gif" />
+    <Content Include="Images\jingdianimg-cy.jpg" />
+    <Content Include="Images\jitiaoicon.gif" />
+    <Content Include="Images\jiudianimg-cy.jpg" />
+    <Content Include="Images\jshi_btm.gif" />
+    <Content Include="Images\jt_feiji.png" />
+    <Content Include="Images\jt_huoche.png" />
+    <Content Include="Images\jt_qiche.png" />
+    <Content Include="Images\jt_youlun.png" />
+    <Content Include="Images\lindui.gif" />
+    <Content Include="Images\list_bg_title.gif" />
+    <Content Include="Images\lm_titlebg.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loadingnew.gif" />
+    <Content Include="Images\log-xt.gif" />
+    <Content Include="Images\log01.gif" />
+    <Content Include="Images\log01.jpg" />
+    <Content Include="Images\log02.gif" />
+    <Content Include="Images\log03.gif" />
+    <Content Include="Images\log04.gif" />
+    <Content Include="Images\log05.gif" />
+    <Content Include="Images\log06.gif" />
+    <Content Include="Images\log07.gif" />
+    <Content Include="Images\login-bg.gif" />
+    <Content Include="Images\login-close.gif" />
+    <Content Include="Images\login-fenxiao-cy.gif" />
+    <Content Include="Images\login-gongying-cy.gif" />
+    <Content Include="Images\login-xitong-cy.gif" />
+    <Content Include="Images\login01.png" />
+    <Content Include="Images\login02.png" />
+    <Content Include="Images\login03.png" />
+    <Content Include="Images\loginbotbg.gif" />
+    <Content Include="Images\loginbtn.png" />
+    <Content Include="Images\loginmainbg.gif" />
+    <Content Include="Images\login_01.gif" />
+    <Content Include="Images\login_02.gif" />
+    <Content Include="Images\login_03.gif" />
+    <Content Include="Images\login_04.gif" />
+    <Content Include="Images\login_05.gif" />
+    <Content Include="Images\login_06.gif" />
+    <Content Include="Images\login_07.gif" />
+    <Content Include="Images\login_08.gif" />
+    <Content Include="Images\login_09.gif" />
+    <Content Include="Images\login_10.gif" />
+    <Content Include="Images\login_11.gif" />
+    <Content Include="Images\login_12.gif" />
+    <Content Include="Images\login_bodybg.jpg" />
+    <Content Include="Images\login_botline.jpg" />
+    <Content Include="Images\login_btn.jpg" />
+    <Content Include="Images\login_footbg.jpg" />
+    <Content Include="Images\login_inputbg.gif" />
+    <Content Include="Images\login_inputbg.jpg" />
+    <Content Include="Images\login_logo.png" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logo_e.gif" />
+    <Content Include="Images\menu-arrow.gif" />
+    <Content Include="Images\menu-currbg.gif" />
+    <Content Include="Images\menu.gif" />
+    <Content Include="Images\menubg.jpg" />
+    <Content Include="Images\menubg1.jpg" />
+    <Content Include="Images\menuicon.gif" />
+    <Content Include="Images\menulibg.gif" />
+    <Content Include="Images\menulibg_01.gif" />
+    <Content Include="Images\menulibg_02.gif" />
+    <Content Include="Images\menu_hover.gif" />
+    <Content Include="Images\menu_link.gif" />
+    <Content Include="Images\mianbodybg.gif" />
+    <Content Include="Images\mobile\banner_bg1.gif" />
+    <Content Include="Images\mobile\denglu.gif" />
+    <Content Include="Images\mobile\line.gif" />
+    <Content Include="Images\mobile\logo.gif" />
+    <Content Include="Images\mobile\search.gif" />
+    <Content Include="Images\nav-01.gif" />
+    <Content Include="Images\nav-02.gif" />
+    <Content Include="Images\navbg.gif" />
+    <Content Include="Images\open-dx.gif" />
+    <Content Include="Images\organization_01.gif" />
+    <Content Include="Images\organization_02.gif" />
+    <Content Include="Images\organization_03.gif" />
+    <Content Include="Images\organization_04.gif" />
+    <Content Include="Images\organization_05.gif" />
+    <Content Include="Images\organization_06.gif" />
+    <Content Include="Images\organization_07.gif" />
+    <Content Include="Images\piao-hui.gif" />
+    <Content Include="Images\piao.gif" />
+    <Content Include="Images\pic.jpg" />
+    <Content Include="Images\price.jpg" />
+    <Content Include="Images\print-img01.jpg" />
+    <Content Include="Images\print-top.gif" />
+    <Content Include="Images\print-top01.gif" />
+    <Content Include="Images\print-xc.jpg" />
+    <Content Include="Images\print-yejiao.gif" />
+    <Content Include="Images\print-yejiao.jpg" />
+    <Content Include="Images\print-yemei.gif" />
+    <Content Include="Images\print1.jpg" />
+    <Content Include="Images\PrintFoot.gif" />
+    <Content Include="Images\PrintHead.gif" />
+    <Content Include="Images\ptjh_02.gif" />
+    <Content Include="Images\ptjh_020_02.gif" />
+    <Content Include="Images\ptjh_04.gif" />
+    <Content Include="Images\ptjh_060.gif" />
+    <Content Include="Images\ptjh_07.gif" />
+    <Content Include="Images\ptjh_08.gif" />
+    <Content Include="Images\ptjh_09.gif" />
+    <Content Include="Images\ptjh_12.gif" />
+    <Content Include="Images\ptjh_16.gif" />
+    <Content Include="Images\ptjh_18.gif" />
+    <Content Include="Images\ptjh_18s.gif" />
+    <Content Include="Images\ptjh_21.gif" />
+    <Content Include="Images\ptjh_22.gif" />
+    <Content Include="Images\ptjh_26.gif" />
+    <Content Include="Images\qian.gif" />
+    <Content Include="Images\qita.gif" />
+    <Content Include="Images\qren_btn.gif" />
+    <Content Include="Images\quick-line.gif" />
+    <Content Include="Images\quick-menu.gif" />
+    <Content Include="Images\quxiao-cy.gif" />
+    <Content Include="Images\right_botbg.gif" />
+    <Content Include="Images\right_closebtn.gif" />
+    <Content Include="Images\right_closebtnhover.gif" />
+    <Content Include="Images\right_midbg.gif" />
+    <Content Include="Images\right_topbg.gif" />
+    <Content Include="Images\rili_l.gif" />
+    <Content Include="Images\rili_r.gif" />
+    <Content Include="Images\search-btn.gif" />
+    <Content Include="Images\search-l.gif" />
+    <Content Include="Images\search-t.png" />
+    <Content Include="Images\shangyiimg.gif" />
+    <Content Include="Images\shch.gif" />
+    <Content Include="Images\small_uploadpic.gif" />
+    <Content Include="Images\submenubg.gif" />
+    <Content Include="Images\submenubg_01.jpg" />
+    <Content Include="Images\swfupload\XPButtonNoText_160x22.png" />
+    <Content Include="Images\swfupload\XPButtonNoText_178_34.gif" />
+    <Content Include="Images\swfupload\XPButtonNoText_92_24.gif" />
+    <Content Include="Images\swfupload\XPButtonUploadText_61x22.png" />
+    <Content Include="Images\sys\exception01.gif" />
+    <Content Include="Images\sys\exception02.jpg" />
+    <Content Include="Images\tablehead-bg.gif" />
+    <Content Include="Images\tableheadline.gif" />
+    <Content Include="Images\td-hoverbg.gif" />
+    <Content Include="Images\td-oddbg.gif" />
+    <Content Include="Images\td-selectbg.gif" />
+    <Content Include="Images\td_caozuohover.gif" />
+    <Content Include="Images\th-bg.gif" />
+    <Content Include="Images\th-line.gif" />
+    <Content Include="Images\tiaoshu-cy.gif" />
+    <Content Include="Images\tongjitu-bm.jpg" />
+    <Content Include="Images\tongjitu-lx.jpg" />
+    <Content Include="Images\tongjitu-qy.jpg" />
+    <Content Include="Images\tongjitu-time.jpg" />
+    <Content Include="Images\tongjitu-zc.jpg" />
+    <Content Include="Images\tongjitu.jpg" />
+    <Content Include="Images\topbg1.gif" />
+    <Content Include="Images\topimg.gif" />
+    <Content Include="Images\top_leftbg.jpg" />
+    <Content Include="Images\TreeView\file.gif" />
+    <Content Include="Images\TreeView\folder-closed.gif" />
+    <Content Include="Images\TreeView\folder.gif" />
+    <Content Include="Images\TreeView\minus.gif" />
+    <Content Include="Images\TreeView\plus.gif" />
+    <Content Include="Images\TreeView\treeview-black-line.gif" />
+    <Content Include="Images\TreeView\treeview-black.gif" />
+    <Content Include="Images\TreeView\treeview-default-line.gif" />
+    <Content Include="Images\TreeView\treeview-default.gif" />
+    <Content Include="Images\TreeView\treeview-famfamfam-line.gif" />
+    <Content Include="Images\TreeView\treeview-famfamfam.gif" />
+    <Content Include="Images\TreeView\treeview-gray-line.gif" />
+    <Content Include="Images\TreeView\treeview-gray.gif" />
+    <Content Include="Images\TreeView\treeview-red-line.gif" />
+    <Content Include="Images\TreeView\treeview-red.gif" />
+    <Content Include="Images\TreeView\tv-collapsable-last.gif" />
+    <Content Include="Images\TreeView\tv-collapsable.gif" />
+    <Content Include="Images\TreeView\tv-expandable-last.gif" />
+    <Content Include="Images\TreeView\tv-expandable.gif" />
+    <Content Include="Images\TreeView\tv-item-last.gif" />
+    <Content Include="Images\TreeView\tv-item.gif" />
+    <Content Include="Images\tuituan.gif" />
+    <Content Include="Images\updateimg.gif" />
+    <Content Include="Images\upload.gif" />
+    <Content Include="Images\xiayiimg.gif" />
+    <Content Include="Images\xiazai.gif" />
+    <Content Include="Images\y-alertbottombg.gif" />
+    <Content Include="Images\y-alertboxbtn.gif" />
+    <Content Include="Images\y-cuohao.gif" />
+    <Content Include="Images\y-delicon.gif" />
+    <Content Include="Images\y-delupdateicon.gif" />
+    <Content Include="Images\y-duihao.gif" />
+    <Content Include="Images\y-formykinfo.gif" />
+    <Content Include="Images\y-gerenzxnavbg01.gif" />
+    <Content Include="Images\y-jdleftbj02.gif" />
+    <Content Include="Images\y-jdleftbj04.gif" />
+    <Content Include="Images\y-jdleftbj05.gif" />
+    <Content Include="Images\y-kehugl01.gif" />
+    <Content Include="Images\y-kehugl02.gif" />
+    <Content Include="Images\y-kehugl03.gif" />
+    <Content Include="Images\y-kehugl04-left.gif" />
+    <Content Include="Images\y-kehugl04-right.gif" />
+    <Content Include="Images\y-kehugl04.gif" />
+    <Content Include="Images\y-kehugl05.gif" />
+    <Content Include="Images\y-kehuqueding.gif" />
+    <Content Include="Images\y-orderformbgleft.gif" />
+    <Content Include="Images\y-orderformbgright.gif" />
+    <Content Include="Images\y-pptablebg.gif" />
+    <Content Include="Images\y-pptableTbg.gif" />
+    <Content Include="Images\y-skjh01.gif" />
+    <Content Include="Images\y-skjh02.gif" />
+    <Content Include="Images\y-skjh03.gif" />
+    <Content Include="Images\y-skjh04.gif" />
+    <Content Include="Images\y-skjh05.gif" />
+    <Content Include="Images\y-skjh06.gif" />
+    <Content Include="Images\y-skjh07.gif" />
+    <Content Include="Images\y-skjh08.gif" />
+    <Content Include="Images\y-tanhao.gif" />
+    <Content Include="Images\yejiao-huatian.gif" />
+    <Content Include="Images\yejiao-xtd.gif" />
+    <Content Include="Images\yemei-xtd.gif" />
+    <Content Include="Images\yufu.gif" />
+    <Content Include="Images\yzm.gif" />
+    <Content Include="Images\zhaopian.gif" />
+    <Content Include="Images\zht1.gif" />
+    <Content Include="Images\zht2.gif" />
+    <Content Include="Images\zht3.gif" />
+    <Content Include="Images\zht4.gif" />
+    <Content Include="Images\zht5.gif" />
+    <Content Include="Images\zhuangtai_blue.gif" />
+    <Content Include="Images\zhuangtai_bot.gif" />
+    <Content Include="Images\zhuangtai_gray.gif" />
+    <Content Include="Images\zhuangtai_green.gif" />
+    <Content Include="Images\zhuangtai_top.jpg" />
+    <Content Include="Images\zhusu.gif" />
+    <Content Include="Images\zzbtn_left.gif" />
+    <Content Include="Images\zzbtn_lefta.gif" />
+    <Content Include="Images\zzbtn_right.gif" />
+    <Content Include="Images\zzbtn_righta.gif" />
+    <Content Include="Images\zzjg+.gif" />
+    <Content Include="Images\zzjg-.gif" />
+    <Content Include="Images\zzjg3.gif" />
+    <Content Include="Images\zzjg_left.gif" />
+    <Content Include="Images\zzjg_mid.gif" />
+    <Content Include="Images\zzjg_right.gif" />
+    <Content Include="Images\复件 %282%29 icon.gif" />
+    <Content Include="Images\复件 icon.gif" />
+    <Content Include="Images\复件 y-jdleftbj02.gif" />
+    <Content Include="Js\ajaxpagecontrols.js" />
+    <Content Include="Js\bt.min.js" />
+    <Content Include="Js\datepicker\calendar.js" />
+    <Content Include="Js\datepicker\lang\en.js" />
+    <Content Include="Js\datepicker\lang\zh-cn.js" />
+    <Content Include="Js\datepicker\lang\zh-tw.js" />
+    <Content Include="Js\datepicker\skin\datePicker.gif" />
+    <Content Include="Js\datepicker\skin\default\datepicker.css" />
+    <Content Include="Js\datepicker\skin\default\img.gif" />
+    <Content Include="Js\datepicker\skin\WdatePicker.css" />
+    <Content Include="Js\datepicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Js\datepicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Js\datepicker\skin\whyGreen\img.gif" />
+    <Content Include="Js\datepicker\WdatePicker.js" />
+    <Content Include="Js\excanvas.js" />
+    <Content Include="Js\foucs.js" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Area2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Bar2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Candlestick.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Column2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Column3D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Doughnut2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Funnel.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Gantt.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Line.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_MSArea2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_MSBar2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_MSColumn2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_MSColumn2DLineDY.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_MSColumn3D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_MSColumn3DLineDY.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_MSLine.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Pie2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_Pie3D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_StackedArea2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_StackedBar2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_StackedColumn2D.swf" />
+    <Content Include="Js\FusionChartsFree\Charts\FCF_StackedColumn3D.swf" />
+    <Content Include="Js\FusionChartsFree\FusionCharts.js" />
+    <Content Include="Js\GetCityList.js" />
+    <Content Include="Js\groupdate.js" />
+    <Content Include="Js\import.js" />
+    <Content Include="Js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Js\jquery-1.4.2.min.js" />
+    <Content Include="Js\jquery-1.4.4.js" />
+    <Content Include="Js\jquery.bgiframe.min.js" />
+    <Content Include="Js\jquery.blockUI.js" />
+    <Content Include="Js\jquery.boxy.js" />
+    <Content Include="Js\jquery.easydrag.handler.beta2.js" />
+    <Content Include="Js\jquery.ppdrag.js" />
+    <Content Include="Js\jquery.treeview.js" />
+    <Content Include="Js\kindeditor-4.1\kindeditor-min.js" />
+    <Content Include="Js\kindeditor-4.1\kindeditor.js" />
+    <Content Include="Js\kindeditor-4.1\lang\ar.js" />
+    <Content Include="Js\kindeditor-4.1\lang\en.js" />
+    <Content Include="Js\kindeditor-4.1\lang\zh_CN.js" />
+    <Content Include="Js\kindeditor-4.1\lang\zh_TW.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\anchor\anchor.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\baidumap\baidumap.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\baidumap\map.html" />
+    <Content Include="Js\kindeditor-4.1\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\code\code.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\code\prettify.css" />
+    <Content Include="Js\kindeditor-4.1\plugins\code\prettify.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\emoticons.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\0.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\1.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\10.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\100.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\101.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\102.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\103.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\104.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\105.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\106.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\107.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\108.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\109.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\11.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\110.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\111.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\112.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\113.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\114.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\115.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\116.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\117.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\118.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\119.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\12.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\120.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\121.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\122.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\123.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\124.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\125.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\126.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\127.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\128.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\129.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\13.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\130.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\131.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\132.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\133.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\134.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\14.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\15.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\16.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\17.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\18.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\19.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\2.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\20.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\21.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\22.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\23.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\24.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\25.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\26.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\27.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\28.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\29.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\3.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\30.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\31.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\32.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\33.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\34.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\35.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\36.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\37.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\38.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\39.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\4.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\40.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\41.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\42.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\43.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\44.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\45.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\46.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\47.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\48.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\49.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\5.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\50.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\51.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\52.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\53.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\54.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\55.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\56.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\57.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\58.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\59.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\6.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\60.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\61.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\62.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\63.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\64.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\65.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\66.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\67.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\68.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\69.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\7.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\70.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\71.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\72.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\73.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\74.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\75.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\76.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\77.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\78.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\79.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\8.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\80.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\81.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\82.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\83.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\84.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\85.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\86.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\87.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\88.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\89.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\9.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\90.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\91.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\92.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\93.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\94.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\95.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\96.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\97.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\98.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\99.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\emoticons\images\static.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\filemanager\filemanager.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\flash\flash.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\image\image.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\image\images\align_left.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\image\images\align_right.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\image\images\align_top.gif" />
+    <Content Include="Js\kindeditor-4.1\plugins\image\images\refresh.png" />
+    <Content Include="Js\kindeditor-4.1\plugins\insertfile\insertfile.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\lineheight\lineheight.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\link\link.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\map\map.html" />
+    <Content Include="Js\kindeditor-4.1\plugins\map\map.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\media\media.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\multiimage\images\image.png" />
+    <Content Include="Js\kindeditor-4.1\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Js\kindeditor-4.1\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="Js\kindeditor-4.1\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Js\kindeditor-4.1\plugins\multiimage\multiimage.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\preview\preview.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\quickformat\quickformat.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\table\table.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\template\html\1.html" />
+    <Content Include="Js\kindeditor-4.1\plugins\template\html\2.html" />
+    <Content Include="Js\kindeditor-4.1\plugins\template\html\3.html" />
+    <Content Include="Js\kindeditor-4.1\plugins\template\template.js" />
+    <Content Include="Js\kindeditor-4.1\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Js\kindeditor-4.1\themes\common\anchor.gif" />
+    <Content Include="Js\kindeditor-4.1\themes\common\blank.gif" />
+    <Content Include="Js\kindeditor-4.1\themes\common\flash.gif" />
+    <Content Include="Js\kindeditor-4.1\themes\common\loading.gif" />
+    <Content Include="Js\kindeditor-4.1\themes\common\media.gif" />
+    <Content Include="Js\kindeditor-4.1\themes\common\rm.gif" />
+    <Content Include="Js\kindeditor-4.1\themes\default\background.png" />
+    <Content Include="Js\kindeditor-4.1\themes\default\default.css" />
+    <Content Include="Js\kindeditor-4.1\themes\default\default.png" />
+    <Content Include="Js\kindeditor-4.1\themes\qq\editor.gif" />
+    <Content Include="Js\kindeditor-4.1\themes\qq\qq.css" />
+    <Content Include="Js\kindeditor-4.1\themes\simple\simple.css" />
+    <Content Include="Js\moveScroll.js" />
+    <Content Include="Js\Newjquery.autocomplete.js" />
+    <Content Include="Js\PNG.js" />
+    <Content Include="Js\slogin.js" />
+    <Content Include="Js\swfupload\handlers.js" />
+    <Content Include="Js\swfupload\swfupload.js" />
+    <Content Include="Js\swfupload\swfupload.swf" />
+    <Content Include="Js\swfupload\swfupload.swfobject.js" />
+    <Content Include="Js\table-toolbar.js" />
+    <Content Include="Js\utilsUri.js" />
+    <Content Include="Js\ValiDatorForm.js" />
+    <Content Include="UserControl\DistributorNotice.ascx" />
+    <Content Include="UserControl\HeadDistributorControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{304DA533-83AB-4A46-B3E9-A957B24FB675}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlLibrary\ControlLibrary.csproj">
+      <Project>{136A722D-1FF1-4EBD-80CB-B87B5CE441B5}</Project>
+      <Name>ControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.BLL\EyouSoft.BLL.csproj">
+      <Project>{0EEEFB4F-491A-4002-BC15-BFD9CB252063}</Project>
+      <Name>EyouSoft.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Model\EyouSoft.Model.csproj">
+      <Project>{41BB31BF-A4C6-4994-AFBA-B559034010C7}</Project>
+      <Name>EyouSoft.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Security.Membership\EyouSoft.Security.Membership.csproj">
+      <Project>{AFA01A24-E10D-4B4C-BC41-C88537B7B314}</Project>
+      <Name>EyouSoft.Security.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Toolkit\EyouSoft.Toolkit.csproj">
+      <Project>{99A84C7E-8F77-45C7-865E-C84478BC1EDC}</Project>
+      <Name>EyouSoft.Toolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\ValidateCode.ashx" />
+    <Content Include="Config\IDAL.Configuration.xml" />
+    <Content Include="DaYin.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="JieSuan.aspx" />
+    <Content Include="logindomain.aspx" />
+    <Content Include="Config\memcached.config" />
+    <Content Include="NoticeInfo.aspx" />
+    <Content Include="XianLu.aspx" />
+    <Content Include="XunJiaEdit.aspx" />
+    <Content Include="YongHu.aspx" />
+    <Content Include="Ashx\GetProvinceAndCity.ashx" />
+    <Content Include="Ashx\GetCityInfo.ashx" />
+    <Content Include="Ashx\AjaxSendEmail.ashx" />
+    <Content Include="ExcelDownTemp\default.dot" />
+    <Content Include="Ashx\GetOrderSells.ashx" />
+    <Content Include="Ashx\ImportSource.ashx" />
+    <None Include="ExcelDownTemp\custom_list.xls" />
+    <None Include="ExcelDownTemp\inside_demo.xls" />
+    <None Include="ExcelDownTemp\KingDee_Report.xls" />
+    <None Include="ExcelDownTemp\out_demo.xls" />
+    <None Include="ExcelDownTemp\导入核算项目.xls" />
+    <None Include="ExcelDownTemp\导入科目表.xls" />
+    <None Include="ExcelDownTemp\短信导入模板.xls" />
+    <None Include="Images\box-images\Thumbs.db" />
+    <None Include="Images\dy-center\Thumbs.db" />
+    <None Include="Images\fx-images\Thumbs.db" />
+    <None Include="Images\images\images\Thumbs.db" />
+    <None Include="Images\images\Thumbs.db" />
+    <None Include="Images\swfupload\Thumbs.db" />
+    <None Include="Images\Thumbs.db" />
+    <None Include="Js\kindeditor-4.1\themes\common\Thumbs.db" />
+    <Content Include="MasterPage\Print.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\string.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>string.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\string.th-th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>string.th-th.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\string.en-us.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>string.en-us.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CommonPage\AjaxRequest\AjaxSupplier.aspx" />
+    <Content Include="CommonPage\Journey.aspx" />
+    <Content Include="CommonPage\JourneySpot.aspx" />
+    <Content Include="CommonPage\selectCaiDan.aspx" />
+    <Content Include="CommonPage\selectCity.aspx" />
+    <Content Include="CommonPage\SelectScenic.aspx" />
+    <Content Include="CommonPage\selectScenicPrice.aspx" />
+    <Content Include="CommonPage\selectWuPin.aspx" />
+    <Content Include="CommonPage\upload.aspx" />
+    <Content Include="CommonPage\UserSupplier.aspx" />
+    <Content Include="Images\fx-images\charu-t.gif" />
+    <Content Include="Images\fx-images\login-bg.gif" />
+    <Content Include="Images\fx-images\loginbtn.png" />
+    <Content Include="Images\fx-images\login_b.png" />
+    <Content Include="Images\fx-images\login_bodybg.jpg" />
+    <Content Include="Images\fx-images\login_botbg.jpg" />
+    <Content Include="Images\fx-images\login_l.png" />
+    <Content Include="Images\fx-images\login_r.png" />
+    <Content Include="Images\fx-images\login_t.png" />
+    <Content Include="Images\fx-images\login_topbg.jpg" />
+    <Content Include="Images\fx-images\shanchu-t.gif" />
+    <Content Include="Images\fx-images\sousuo-t.gif" />
+    <Content Include="Images\fx-images\tianjia-t.gif" />
+    <Content Include="Images\fx-images\xuanyong-t.gif" />
+    <Content Include="UserControl\Give.ascx" />
+    <Content Include="UserControl\Journey.ascx" />
+    <Content Include="UserControl\selectFWeiCan.ascx" />
+    <Content Include="UserControl\SelectJourneySpot.ascx" />
+    <Content Include="UserControl\SelfPay.ascx" />
+    <Content Include="UserControl\Tip.ascx" />
+    <Content Include="UserControl\UploadControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AcceptPlan.aspx" />
+    <Content Include="AcceptPlanApply.aspx" />
+    <Content Include="App_LocalResources\Login.aspx.en-us.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Login.aspx.th-th.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CommonPage\OrderSells.aspx" />
+    <Content Include="CommonPage\PriceRemark.aspx" />
+    <Content Include="CommonPage\SetSeat.aspx" />
+    <Content Include="FinancialControl.aspx" />
+    <Content Include="FinancialRegistration.aspx" />
+    <Content Include="Images\fx-images\linebg02_l.gif" />
+    <Content Include="Images\fx-images\linebg02_r.gif" />
+    <Content Include="Images\huoche.gif" />
+    <Content Include="Images\lunchuan.gif" />
+    <Content Include="Images\xuanyong.gif" />
+    <Content Include="ImportSource\ImportPage.aspx" />
+    <Content Include="MyOrder.aspx" />
+    <Content Include="OrderSee.aspx" />
+    <Content Include="PrintPage\QuoteDetail.aspx" />
+    <Content Include="PrintPage\QuoteSimple.aspx" />
+    <Content Include="PrintPage\Voucher.aspx" />
+    <Content Include="PrintPage\XingChengDan.aspx" />
+    <Content Include="PrintPage\xz\fxs\dingdanxinxi.aspx" />
+    <Content Include="PrintPage\xz\fxs\sanpin.aspx" />
+    <Content Include="PrintPage\xz\fxs\youkexinxi.aspx" />
+    <Content Include="Temp\Kis\readme.txt" />
+    <Content Include="Temp\readme.txt" />
+    <Content Include="Temp\Word\readme.txt" />
+    <Content Include="TravellerInsurance.aspx" />
+    <Content Include="UserControl\PriceStand.ascx" />
+    <Content Include="UserControl\SelectPriceRemark.ascx" />
+    <Content Include="UserControl\SellsSelect.ascx" />
+    <Content Include="UserControl\SendEmail.ascx" />
+    <Content Include="UserControl\SetSeat.ascx" />
+    <Content Include="UserControl\TravelControl.ascx" />
+    <Content Include="UserControl\TravelControlS.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UploadFiles\temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>2755</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

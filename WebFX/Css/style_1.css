@@ -1,0 +1,137 @@
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+td {
+	font-size: 12px;
+	line-height: 24px;
+	word-wrap:break-word; word-break:break-all;table-layout:fixed;
+}
+table{ border-collapse:collapse}
+a:link {
+	color: #073389;
+	text-decoration: none;
+}
+a:visited {
+	color: #073389;
+	text-decoration: none;
+}
+a:hover {
+	color: #073389;
+	text-decoration: underline;
+}
+a:active {
+	color: #073389;
+}
+h1{
+	font-size:30px;
+	color: #000000;
+	line-height: 35px;
+	font-weight: bold;
+}
+h2{
+	font-size:20px;
+	color: #000000;
+	line-height: 25px;
+	font-weight: bold;
+}
+
+.font_hang {
+	font-size: 25px;
+	color: #000000;
+	line-height: 35px;
+	font-weight: bold;
+}
+.baocun_an {
+	font-size: 12px;
+	color: #000000;
+	background-image: url(../images/baocun.gif);
+	float: none;
+	height: 24px;
+	width: 103px;
+	border: 0px;
+}
+.bottow_side {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	font-size: 12px;
+}
+.bottow_side14{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	font-size: 14px;
+}
+.bottow_no {
+	border-bottom-width: 0px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+    border-bottom-style: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	font-size: 12px;
+	line-height: 16px;
+}
+.an_tijiaobaocun {
+	font-size: 12px;
+	color: #073389;
+	background-image: url(../images/tianjiabaocun.gif);
+	float: none;
+	height: 21px;
+	width: 53px;
+	border: 0px;
+}
+.an_tijiaobaocun_f {
+	font-size: 12px;
+	color: #000000;
+	background-image: url(../images/tianjiabaocun_f.gif);
+	float: none;
+	height: 21px;
+	width: 53px;
+	border: 0px;
+}
+.shuruheikuang {
+	border: 1px solid #000000;
+}
+.dibian {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+.queright{border-top:1px solid #000;border-left:1px solid #000;border-bottom:2px solid #000; border-right:0px}
+/*打印文件夹-文档表格样式yf-08-29*/
+.contents_hg{ text-align:left; line-height:26px; padding-left:5px;}
+.bottom_black{border-bottom:#000 solid 1px; font-weight:bold;}
+.font_kt{font-family: "_GB2312"; font-size:16px; color:#000;}
+.table_font16{ font-size:16px; color:#000; font-weight:bold;}
+.font24_kt{font-family: "_GB2312"; font-size:24px; color:#000;}
+.font12_kt{font-family: "_GB2312"; font-size:12px; color:#000; font-weight:bold;}
+.bor_bot{border-bottom:#000 solid 1px; vertical-align:bottom;}
+.font14_ht{font-family: ""; font-size:13px; color:#000; line-height:22px; text-align:left; text-indent:22px; font-weight:bold;}
+.font_htbh{font-family: ""; font-size:18px; color:#f00; font-weight:bold; text-align:right;}
+.basic_hg{ text-indent:22px; line-height:20px; padding-left:5px;}
+.border_no{ border-bottom:#000 solid 1px; border-top:none; border-left:none;border-right:none; line-height:20px; height:20px;}
+.pad-left{ padding-left:24px;}
+.font18_kt{font-family: "_GB2312"; font-size:18px; color:#000;}
+
+.font24{ font-size:24px; color:#000;}
+.input_print{ border:0 none; heigh:18px;text-align:left; vertical-align:middle;}
+.padd-leftStyle{ padding-left:5px; text-align:left;}
+.pand5 td,.pand5 th{padding:5px; line-height;:18px;}

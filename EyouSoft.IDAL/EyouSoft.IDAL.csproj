@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C596872E-9448-4E1F-8D4C-0005873ED428}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EyouSoft.IDAL</RootNamespace>
+    <AssemblyName>EyouSoft.IDAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\EyouSoft.IDAL.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComStructure\IComAccount.cs" />
+    <Compile Include="ComStructure\IComArea.cs" />
+    <Compile Include="ComStructure\IComAttach.cs" />
+    <Compile Include="ComStructure\IComCarLocation.cs" />
+    <Compile Include="ComStructure\IComCarPlace.cs" />
+    <Compile Include="ComStructure\IComCarType.cs" />
+    <Compile Include="ComStructure\IComCity.cs" />
+    <Compile Include="ComStructure\IComDepartment.cs" />
+    <Compile Include="ComStructure\IComInsurance.cs" />
+    <Compile Include="ComStructure\IComLev.cs" />
+    <Compile Include="ComStructure\IComMemberType.cs" />
+    <Compile Include="ComStructure\ICompany.cs" />
+    <Compile Include="ComStructure\IComPayment.cs" />
+    <Compile Include="ComStructure\IComProject.cs" />
+    <Compile Include="ComStructure\IComRole.cs" />
+    <Compile Include="ComStructure\IComSetting.cs" />
+    <Compile Include="ComStructure\IComShip.cs" />
+    <Compile Include="ComStructure\IComStand.cs" />
+    <Compile Include="ComStructure\IComUser.cs" />
+    <Compile Include="ComStructure\IDaoYou.cs" />
+    <Compile Include="ComStructure\ITourNoOptionCode.cs" />
+    <Compile Include="ConStructure\IContractNum.cs" />
+    <Compile Include="CrmStructure\ICrm.cs" />
+    <Compile Include="CrmStructure\ICrmComplaint.cs" />
+    <Compile Include="CrmStructure\ICrmLinkman.cs" />
+    <Compile Include="CrmStructure\ICrmMember.cs" />
+    <Compile Include="CrmStructure\ICrmVisit.cs" />
+    <Compile Include="FinStructure\IDaiShou.cs" />
+    <Compile Include="FinStructure\IFinance.cs" />
+    <Compile Include="FinStructure\IKis.cs" />
+    <Compile Include="GovStructure\IDocuments.cs" />
+    <Compile Include="GovStructure\IArchives.cs" />
+    <Compile Include="GovStructure\IAttendance.cs" />
+    <Compile Include="GovStructure\IContract.cs" />
+    <Compile Include="GovStructure\IGood.cs" />
+    <Compile Include="GovStructure\IGovFilePersonnel.cs" />
+    <Compile Include="GovStructure\IMeeting.cs" />
+    <Compile Include="GovStructure\INotice.cs" />
+    <Compile Include="GovStructure\IOpinion.cs" />
+    <Compile Include="GovStructure\IPosition.cs" />
+    <Compile Include="GovStructure\IRegulation.cs" />
+    <Compile Include="GovStructure\ITrain.cs" />
+    <Compile Include="HGysStructure\IGys.cs" />
+    <Compile Include="HGysStructure\IJiaGe.cs" />
+    <Compile Include="HGysStructure\ISiJi.cs" />
+    <Compile Include="HGysStructure\IWuPin.cs" />
+    <Compile Include="HGysStructure\IYuCunKuan.cs" />
+    <Compile Include="HPlanStructure\IPlan.cs" />
+    <Compile Include="HTourStructure\IBianGeng.cs" />
+    <Compile Include="HTourStructure\IQuote.cs" />
+    <Compile Include="HTourStructure\ITour.cs" />
+    <Compile Include="HTourStructure\ITourOrder.cs" />
+    <Compile Include="IndStructure\IIndividual.cs" />
+    <Compile Include="IQC\ICarTeamQC.cs" />
+    <Compile Include="IQC\ITourServiceQC.cs" />
+    <Compile Include="PlanStructure\IJiDiaoAnPaiBianGeng.cs" />
+    <Compile Include="SmsStructure\IDaoRuLxr.cs" />
+    <Compile Include="SmsStructure\ISmsDetail.cs" />
+    <Compile Include="SmsStructure\ISmsPhrase.cs" />
+    <Compile Include="SmsStructure\ISmsRenWu.cs" />
+    <Compile Include="SmsStructure\ISmsSetting.cs" />
+    <Compile Include="SmsStructure\ISmsTourTimeTask.cs" />
+    <Compile Include="SysStructure\ISysCarType.cs" />
+    <Compile Include="SysStructure\ISysCountryAndCity.cs" />
+    <Compile Include="SysStructure\ISysOptionConfig.cs" />
+    <Compile Include="SysStructure\ISysRoom.cs" />
+    <Compile Include="TongJiStructure\IDaoYouYeJi.cs" />
+    <Compile Include="TongJiStructure\ILiRun.cs" />
+    <Compile Include="TongJiStructure\IRenShu.cs" />
+    <Compile Include="TongJiStructure\IRenTian.cs" />
+    <Compile Include="TongJiStructure\IRuJing.cs" />
+    <Compile Include="TourStructure\IQuote.cs" />
+    <Compile Include="PlanStructure\IPlan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatStructure\IStatistics.cs" />
+    <Compile Include="SysStructure\IGeography.cs" />
+    <Compile Include="SysStructure\ISys.cs" />
+    <Compile Include="SysStructure\ISysLogHandle.cs" />
+    <Compile Include="TourStructure\ISingleService.cs" />
+    <Compile Include="TourStructure\ITourOrderChange.cs" />
+    <Compile Include="TourStructure\ITour.cs" />
+    <Compile Include="TourStructure\ITourOrder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EyouSoft.Model\EyouSoft.Model.csproj">
+      <Project>{41BB31BF-A4C6-4994-AFBA-B559034010C7}</Project>
+      <Name>EyouSoft.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

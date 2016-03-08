@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="上移" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="下移" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="两次输入的密码不一致" xml:space="preserve">
+    <value>两次输入的密码不一致</value>
+  </data>
+  <data name="个性服务要求" xml:space="preserve">
+    <value>个性服务要求</value>
+  </data>
+  <data name="中" xml:space="preserve">
+    <value>中</value>
+  </data>
+  <data name="中餐" xml:space="preserve">
+    <value>中餐</value>
+  </data>
+  <data name="交通" xml:space="preserve">
+    <value>交通</value>
+  </data>
+  <data name="人数" xml:space="preserve">
+    <value>人数</value>
+  </data>
+  <data name="价格" xml:space="preserve">
+    <value>价格</value>
+  </data>
+  <data name="住宿" xml:space="preserve">
+    <value>住宿</value>
+  </data>
+  <data name="供应商名称" xml:space="preserve">
+    <value>供应商名称</value>
+  </data>
+  <data name="保存" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="保存内容不能为空" xml:space="preserve">
+    <value>保存内容不能为空</value>
+  </data>
+  <data name="修改成功" xml:space="preserve">
+    <value>修改成功</value>
+  </data>
+  <data name="修改询价" xml:space="preserve">
+    <value>修改询价</value>
+  </data>
+  <data name="像素" xml:space="preserve">
+    <value>像素</value>
+  </data>
+  <data name="儿童" xml:space="preserve">
+    <value>儿童</value>
+  </data>
+  <data name="儿童价" xml:space="preserve">
+    <value>儿童价</value>
+  </data>
+  <data name="元人" xml:space="preserve">
+    <value>元/人</value>
+  </data>
+  <data name="公司名称" xml:space="preserve">
+    <value>公司名称</value>
+  </data>
+  <data name="公告" xml:space="preserve">
+    <value>公告</value>
+  </data>
+  <data name="关闭" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="其他费用" xml:space="preserve">
+    <value>其他费用</value>
+  </data>
+  <data name="内宾" xml:space="preserve">
+    <value>内宾</value>
+  </data>
+  <data name="减" xml:space="preserve">
+    <value>减</value>
+  </data>
+  <data name="出团时间" xml:space="preserve">
+    <value>出团时间</value>
+  </data>
+  <data name="出团确认单" xml:space="preserve">
+    <value>出团确认单</value>
+  </data>
+  <data name="出团通知书" xml:space="preserve">
+    <value>出团通知书</value>
+  </data>
+  <data name="删除" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="删除成功" xml:space="preserve">
+    <value>删除成功</value>
+  </data>
+  <data name="删除询价" xml:space="preserve">
+    <value>删除询价</value>
+  </data>
+  <data name="删除附件" xml:space="preserve">
+    <value>删除附件</value>
+  </data>
+  <data name="加" xml:space="preserve">
+    <value>加</value>
+  </data>
+  <data name="单价" xml:space="preserve">
+    <value>单价</value>
+  </data>
+  <data name="单房差" xml:space="preserve">
+    <value>单房差</value>
+  </data>
+  <data name="县区" xml:space="preserve">
+    <value>县区</value>
+  </data>
+  <data name="参考菜单" xml:space="preserve">
+    <value>参考菜单</value>
+  </data>
+  <data name="发布人" xml:space="preserve">
+    <value>发布人</value>
+  </data>
+  <data name="发送失败" xml:space="preserve">
+    <value>发送失败</value>
+  </data>
+  <data name="发送成功" xml:space="preserve">
+    <value>发送成功</value>
+  </data>
+  <data name="发送邮件" xml:space="preserve">
+    <value>发送邮件</value>
+  </data>
+  <data name="取消" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="取消原因" xml:space="preserve">
+    <value>取消原因</value>
+  </data>
+  <data name="取消报价" xml:space="preserve">
+    <value>取消报价</value>
+  </data>
+  <data name="只能选择一个县区" xml:space="preserve">
+    <value>只能选择一个县区</value>
+  </data>
+  <data name="只能选择一个城市" xml:space="preserve">
+    <value>只能选择一个城市</value>
+  </data>
+  <data name="只能选择一行数据进行修改" xml:space="preserve">
+    <value>只能选择一行数据进行修改</value>
+  </data>
+  <data name="合计金额" xml:space="preserve">
+    <value>合计金额</value>
+  </data>
+  <data name="同行价" xml:space="preserve">
+    <value>同行价</value>
+  </data>
+  <data name="咨询时间" xml:space="preserve">
+    <value>咨询时间</value>
+  </data>
+  <data name="因当地法律或其他原因不能解析给出地址" xml:space="preserve">
+    <value>The geocode for the given address or the route for the given directions query cannot be returned due to legal or contractual reasons.</value>
+  </data>
+  <data name="团号" xml:space="preserve">
+    <value>团号</value>
+  </data>
+  <data name="团型" xml:space="preserve">
+    <value>团型</value>
+  </data>
+  <data name="团队" xml:space="preserve">
+    <value>团队</value>
+  </data>
+  <data name="国家" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="国家地区" xml:space="preserve">
+    <value>国家 地区</value>
+  </data>
+  <data name="国籍" xml:space="preserve">
+    <value>国籍</value>
+  </data>
+  <data name="图片删除链接" xml:space="preserve">
+    <value>/images/delimg.gif</value>
+  </data>
+  <data name="图片插入链接" xml:space="preserve">
+    <value>/images/charuimg.gif</value>
+  </data>
+  <data name="图片搜索链接" xml:space="preserve">
+    <value>/images/fx-images/searchbg.gif</value>
+  </data>
+  <data name="图片添加链接" xml:space="preserve">
+    <value>/images/addimg.gif</value>
+  </data>
+  <data name="图片选用链接" xml:space="preserve">
+    <value>/images/xuanyong.gif</value>
+  </data>
+  <data name="地图" xml:space="preserve">
+    <value>地图</value>
+  </data>
+  <data name="城市" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="增加日程" xml:space="preserve">
+    <value>增加日程</value>
+  </data>
+  <data name="备注" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="外宾" xml:space="preserve">
+    <value>外宾</value>
+  </data>
+  <data name="天" xml:space="preserve">
+    <value>天</value>
+  </data>
+  <data name="天数" xml:space="preserve">
+    <value>天数</value>
+  </data>
+  <data name="如不修改请置空" xml:space="preserve">
+    <value>如不修改请置空</value>
+  </data>
+  <data name="字体" xml:space="preserve">
+    <value>字体</value>
+  </data>
+  <data name="客源单位" xml:space="preserve">
+    <value>客源单位</value>
+  </data>
+  <data name="宾客类型" xml:space="preserve">
+    <value>宾客类型</value>
+  </data>
+  <data name="密码" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="密码不能为空" xml:space="preserve">
+    <value>密码不能为空</value>
+  </data>
+  <data name="密码修改失败" xml:space="preserve">
+    <value>密码修改失败</value>
+  </data>
+  <data name="密码修改成功" xml:space="preserve">
+    <value>密码修改成功，正在跳转…</value>
+  </data>
+  <data name="导入类库是指定的密钥有误" xml:space="preserve">
+    <value>The given key is either invalid or does not match the domain for which it was given.</value>
+  </data>
+  <data name="导出" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="小费" xml:space="preserve">
+    <value>小费</value>
+  </data>
+  <data name="小费名称" xml:space="preserve">
+    <value>小费名称</value>
+  </data>
+  <data name="已付金额" xml:space="preserve">
+    <value>已付金额</value>
+  </data>
+  <data name="已经报价成功的数据不允许修改" xml:space="preserve">
+    <value>已经报价成功的数据不允许修改</value>
+  </data>
+  <data name="已结清" xml:space="preserve">
+    <value>已结清</value>
+  </data>
+  <data name="已调整至最大字体" xml:space="preserve">
+    <value>已调整至最大字体</value>
+  </data>
+  <data name="已调整至最小字体" xml:space="preserve">
+    <value>已调整至最小字体</value>
+  </data>
+  <data name="平季价格" xml:space="preserve">
+    <value>平季价格</value>
+  </data>
+  <data name="应付金额" xml:space="preserve">
+    <value>应付金额</value>
+  </data>
+  <data name="开始时间" xml:space="preserve">
+    <value>开始时间</value>
+  </data>
+  <data name="成人" xml:space="preserve">
+    <value>成人</value>
+  </data>
+  <data name="成人价" xml:space="preserve">
+    <value>成人价</value>
+  </data>
+  <data name="我的订单" xml:space="preserve">
+    <value>我的订单</value>
+  </data>
+  <data name="或" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="截止时间" xml:space="preserve">
+    <value>截止时间</value>
+  </data>
+  <data name="打印" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="打印设置" xml:space="preserve">
+    <value>打印设置</value>
+  </data>
+  <data name="打印设置失败" xml:space="preserve">
+    <value>打印设置失败！</value>
+  </data>
+  <data name="打印设置成功" xml:space="preserve">
+    <value>打印设置成功，正在跳转…</value>
+  </data>
+  <data name="报价单" xml:space="preserve">
+    <value>报价单</value>
+  </data>
+  <data name="报价备注" xml:space="preserve">
+    <value>报价备注</value>
+  </data>
+  <data name="报价成功" xml:space="preserve">
+    <value>报价成功</value>
+  </data>
+  <data name="报价状态" xml:space="preserve">
+    <value>报价状态</value>
+  </data>
+  <data name="抵达城市" xml:space="preserve">
+    <value>抵达城市</value>
+  </data>
+  <data name="抵达日期" xml:space="preserve">
+    <value>抵达日期</value>
+  </data>
+  <data name="提交中" xml:space="preserve">
+    <value>提交中…</value>
+  </data>
+  <data name="插入" xml:space="preserve">
+    <value>插入</value>
+  </data>
+  <data name="搜索" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="操作" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="操作失败" xml:space="preserve">
+    <value>操作失败</value>
+  </data>
+  <data name="收客计划" xml:space="preserve">
+    <value>收客计划</value>
+  </data>
+  <data name="散客" xml:space="preserve">
+    <value>散客</value>
+  </data>
+  <data name="新增成功" xml:space="preserve">
+    <value>新增成功</value>
+  </data>
+  <data name="新增询价" xml:space="preserve">
+    <value>新增询价</value>
+  </data>
+  <data name="无法删除已经报价成功的数据" xml:space="preserve">
+    <value>无法删除已经报价成功的数据</value>
+  </data>
+  <data name="日期" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="早" xml:space="preserve">
+    <value>早</value>
+  </data>
+  <data name="早餐" xml:space="preserve">
+    <value>早餐</value>
+  </data>
+  <data name="旺季价格" xml:space="preserve">
+    <value>旺季价格</value>
+  </data>
+  <data name="是否删除" xml:space="preserve">
+    <value>是否删除?</value>
+  </data>
+  <data name="是否确定发送" xml:space="preserve">
+    <value>是否确定发送</value>
+  </data>
+  <data name="晚" xml:space="preserve">
+    <value>晚</value>
+  </data>
+  <data name="晚餐" xml:space="preserve">
+    <value>晚餐</value>
+  </data>
+  <data name="景点" xml:space="preserve">
+    <value>景点</value>
+  </data>
+  <data name="景点名称" xml:space="preserve">
+    <value>景点名称</value>
+  </data>
+  <data name="暂无数据" xml:space="preserve">
+    <value>暂无数据</value>
+  </data>
+  <data name="最大行间距" xml:space="preserve">
+    <value>最大行间距</value>
+  </data>
+  <data name="最小行间距" xml:space="preserve">
+    <value>最小行间距</value>
+  </data>
+  <data name="最少保留一行" xml:space="preserve">
+    <value>最少保留一行</value>
+  </data>
+  <data name="服务器不能正确解析你输入的地址" xml:space="preserve">
+    <value>A geocoding, directions or maximum zoom level request could not be successfully processed, yet the exact reason for the failure is not known.</value>
+  </data>
+  <data name="未付金额" xml:space="preserve">
+    <value>未付金额</value>
+  </data>
+  <data name="未匹配到城市" xml:space="preserve">
+    <value>未匹配到城市</value>
+  </data>
+  <data name="未报价成功" xml:space="preserve">
+    <value>未报价成功</value>
+  </data>
+  <data name="未结清" xml:space="preserve">
+    <value>未结清</value>
+  </data>
+  <data name="查看" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="查询地址未知" xml:space="preserve">
+    <value>No corresponding geographic location could be found for the specified address.</value>
+  </data>
+  <data name="查询太过频繁" xml:space="preserve">
+    <value>The given key has gone over the requests limit in the 24 hour period or has submitted too many requests in too short a period of time.</value>
+  </data>
+  <data name="查询条件不能为空" xml:space="preserve">
+    <value>The HTTP q parameter was either missing or had no value.</value>
+  </data>
+  <data name="正在加载请等待" xml:space="preserve">
+    <value>正在加载,请等待</value>
+  </data>
+  <data name="淡季价格" xml:space="preserve">
+    <value>淡季价格</value>
+  </data>
+  <data name="清除" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="特推线路" xml:space="preserve">
+    <value>特推线路</value>
+  </data>
+  <data name="状态" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="用户信息" xml:space="preserve">
+    <value>用户信息</value>
+  </data>
+  <data name="用户名" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="用户名不能为空" xml:space="preserve">
+    <value>用户名不能为空</value>
+  </data>
+  <data name="用户名已存在" xml:space="preserve">
+    <value>用户名已存在</value>
+  </data>
+  <data name="用户名或密码不正确" xml:space="preserve">
+    <value>用户名或密码不正确</value>
+  </data>
+  <data name="用餐" xml:space="preserve">
+    <value>用餐</value>
+  </data>
+  <data name="登陆" xml:space="preserve">
+    <value>登陆</value>
+  </data>
+  <data name="省份" xml:space="preserve">
+    <value>省份</value>
+  </data>
+  <data name="离开城市" xml:space="preserve">
+    <value>离开城市</value>
+  </data>
+  <data name="离开日期" xml:space="preserve">
+    <value>离开日期</value>
+  </data>
+  <data name="第" xml:space="preserve">
+    <value>第</value>
+  </data>
+  <data name="简要行程单" xml:space="preserve">
+    <value>简要行程单</value>
+  </data>
+  <data name="系统设置" xml:space="preserve">
+    <value>系统设置</value>
+  </data>
+  <data name="线路区域" xml:space="preserve">
+    <value>线路区域</value>
+  </data>
+  <data name="线路名称" xml:space="preserve">
+    <value>线路名称</value>
+  </data>
+  <data name="结算中心" xml:space="preserve">
+    <value>结算中心</value>
+  </data>
+  <data name="结算价" xml:space="preserve">
+    <value>结算价</value>
+  </data>
+  <data name="给出的两地之间无路可走或我们的现有的数据中缺少路线规划路线" xml:space="preserve">
+    <value>The GDirections object could not compute directions between the points mentioned in the query.</value>
+  </data>
+  <data name="编号" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="自费项目" xml:space="preserve">
+    <value>自费项目</value>
+  </data>
+  <data name="航班时间" xml:space="preserve">
+    <value>航班/时间</value>
+  </data>
+  <data name="菜单" xml:space="preserve">
+    <value>菜单</value>
+  </data>
+  <data name="行程中城市不能为空" xml:space="preserve">
+    <value>行程中城市不能为空</value>
+  </data>
+  <data name="行程亮点" xml:space="preserve">
+    <value>行程亮点</value>
+  </data>
+  <data name="行程单" xml:space="preserve">
+    <value>行程单</value>
+  </data>
+  <data name="行程备注" xml:space="preserve">
+    <value>行程备注</value>
+  </data>
+  <data name="行程安排" xml:space="preserve">
+    <value>行程安排</value>
+  </data>
+  <data name="行间距" xml:space="preserve">
+    <value>行间距</value>
+  </data>
+  <data name="计调员" xml:space="preserve">
+    <value>计调员</value>
+  </data>
+  <data name="计调安排确认单" xml:space="preserve">
+    <value>计调安排确认单</value>
+  </data>
+  <data name="订单状态" xml:space="preserve">
+    <value>订单状态</value>
+  </data>
+  <data name="记住用户名" xml:space="preserve">
+    <value>记住用户名</value>
+  </data>
+  <data name="询价中心" xml:space="preserve">
+    <value>询价中心</value>
+  </data>
+  <data name="询价日期" xml:space="preserve">
+    <value>询价日期</value>
+  </data>
+  <data name="询价日期不能为空" xml:space="preserve">
+    <value>询价日期不能为空</value>
+  </data>
+  <data name="询价编号" xml:space="preserve">
+    <value>询价编号</value>
+  </data>
+  <data name="详细行程" xml:space="preserve">
+    <value>详细行程</value>
+  </data>
+  <data name="详细行程单" xml:space="preserve">
+    <value>详细行程单</value>
+  </data>
+  <data name="语言" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="请先选择国家" xml:space="preserve">
+    <value>请先选择国家</value>
+  </data>
+  <data name="请先选择城市" xml:space="preserve">
+    <value>请先选择城市</value>
+  </data>
+  <data name="请输入抵达日期" xml:space="preserve">
+    <value>请输入抵达日期</value>
+  </data>
+  <data name="请输入最大成人数" xml:space="preserve">
+    <value>请输入最大成人数</value>
+  </data>
+  <data name="请输入最小成人数" xml:space="preserve">
+    <value>请输入最小成人数</value>
+  </data>
+  <data name="请输入正确的天数" xml:space="preserve">
+    <value>请输入正确的天数</value>
+  </data>
+  <data name="请输入正确的赠送金额" xml:space="preserve">
+    <value>请输入正确的赠送金额</value>
+  </data>
+  <data name="请输入正确的邮箱地址" xml:space="preserve">
+    <value>请输入正确的邮箱地址</value>
+  </data>
+  <data name="请输入正确的金额" xml:space="preserve">
+    <value>请输入正确的金额</value>
+  </data>
+  <data name="请输入离开日期" xml:space="preserve">
+    <value>请输入离开日期</value>
+  </data>
+  <data name="请输入线路名称" xml:space="preserve">
+    <value>请输入线路名称</value>
+  </data>
+  <data name="请选择" xml:space="preserve">
+    <value>请选择</value>
+  </data>
+  <data name="请选择一行数据" xml:space="preserve">
+    <value>请选择一行数据</value>
+  </data>
+  <data name="请选择供应商" xml:space="preserve">
+    <value>请选择供应商</value>
+  </data>
+  <data name="请选择国家" xml:space="preserve">
+    <value>请选择国家</value>
+  </data>
+  <data name="请选择城市" xml:space="preserve">
+    <value>请选择城市</value>
+  </data>
+  <data name="请选择线路区域" xml:space="preserve">
+    <value>请选择线路区域</value>
+  </data>
+  <data name="财务管理" xml:space="preserve">
+    <value>财务管理</value>
+  </data>
+  <data name="购物" xml:space="preserve">
+    <value>购物</value>
+  </data>
+  <data name="购物点" xml:space="preserve">
+    <value>购物点</value>
+  </data>
+  <data name="费用结算单" xml:space="preserve">
+    <value>费用结算单</value>
+  </data>
+  <data name="赠送" xml:space="preserve">
+    <value>赠送</value>
+  </data>
+  <data name="路线" xml:space="preserve">
+    <value>路线规划结果</value>
+  </data>
+  <data name="路线规划查询条件设定有误" xml:space="preserve">
+    <value>A directions request could not be successfully parsed.</value>
+  </data>
+  <data name="选择" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="选择供应商" xml:space="preserve">
+    <value>选择供应商</value>
+  </data>
+  <data name="选择城市" xml:space="preserve">
+    <value>选择城市</value>
+  </data>
+  <data name="选择景点" xml:space="preserve">
+    <value>选择景点</value>
+  </data>
+  <data name="选择景点价格" xml:space="preserve">
+    <value>选择景点价格</value>
+  </data>
+  <data name="选择物品" xml:space="preserve">
+    <value>选择物品</value>
+  </data>
+  <data name="选择菜单" xml:space="preserve">
+    <value>选择菜单</value>
+  </data>
+  <data name="选择酒店" xml:space="preserve">
+    <value>选择酒店</value>
+  </data>
+  <data name="选择餐馆" xml:space="preserve">
+    <value>选择餐馆</value>
+  </data>
+  <data name="选用" xml:space="preserve">
+    <value>选用</value>
+  </data>
+  <data name="邮件接收方地址" xml:space="preserve">
+    <value>邮件接收方地址</value>
+  </data>
+  <data name="酒店" xml:space="preserve">
+    <value>酒店</value>
+  </data>
+  <data name="酒店名称" xml:space="preserve">
+    <value>酒店名称</value>
+  </data>
+  <data name="酒店星级要求" xml:space="preserve">
+    <value>酒店星级要求</value>
+  </data>
+  <data name="重复密码" xml:space="preserve">
+    <value>重复密码</value>
+  </data>
+  <data name="金额" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="门市价" xml:space="preserve">
+    <value>门市价</value>
+  </data>
+  <data name="隐藏TO" xml:space="preserve">
+    <value>隐藏TO</value>
+  </data>
+  <data name="隐藏表格" xml:space="preserve">
+    <value>隐藏表格</value>
+  </data>
+  <data name="隐藏页眉" xml:space="preserve">
+    <value>隐藏页眉</value>
+  </data>
+  <data name="隐藏页脚" xml:space="preserve">
+    <value>隐藏页脚</value>
+  </data>
+  <data name="页眉图片" xml:space="preserve">
+    <value>页眉图片</value>
+  </data>
+  <data name="页脚图片" xml:space="preserve">
+    <value>页脚图片</value>
+  </data>
+  <data name="项目" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="领队" xml:space="preserve">
+    <value>领队</value>
+  </data>
+  <data name="风味餐" xml:space="preserve">
+    <value>风味餐</value>
+  </data>
+  <data name="餐厅" xml:space="preserve">
+    <value>餐厅</value>
+  </data>
+  <data name="首页" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="验证码" xml:space="preserve">
+    <value>验证码</value>
+  </data>
+</root>

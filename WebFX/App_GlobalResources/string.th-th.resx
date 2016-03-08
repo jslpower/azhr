@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="上移" xml:space="preserve">
+    <value>เลื่อนบน</value>
+  </data>
+  <data name="下移" xml:space="preserve">
+    <value>เลื่อนล่าง</value>
+  </data>
+  <data name="两次输入的密码不一致" xml:space="preserve">
+    <value>กดรหัสผิด 2 ครั้ง</value>
+  </data>
+  <data name="个性服务要求" xml:space="preserve">
+    <value>รายการพิเศษที่ต้องการ</value>
+  </data>
+  <data name="中" xml:space="preserve">
+    <value>กลางวัน</value>
+  </data>
+  <data name="中餐" xml:space="preserve">
+    <value>อาหารกลางวัน</value>
+  </data>
+  <data name="交通" xml:space="preserve">
+    <value>พาหนะ</value>
+  </data>
+  <data name="人数" xml:space="preserve">
+    <value>จำนวนคน</value>
+  </data>
+  <data name="价格" xml:space="preserve">
+    <value>ราคา</value>
+  </data>
+  <data name="住宿" xml:space="preserve">
+    <value>ที่พัก</value>
+  </data>
+  <data name="供应商名称" xml:space="preserve">
+    <value>ชื่อผู้ขาย</value>
+  </data>
+  <data name="保存" xml:space="preserve">
+    <value>เก็บข้อมูล</value>
+  </data>
+  <data name="保存内容不能为空" xml:space="preserve">
+    <value>ข้อมูลเว้นว่างไม่ได้</value>
+  </data>
+  <data name="修改成功" xml:space="preserve">
+    <value>แก้ไขสำเร็จ</value>
+  </data>
+  <data name="修改询价" xml:space="preserve">
+    <value>เปลี่ยนแปลงราคา</value>
+  </data>
+  <data name="像素" xml:space="preserve">
+    <value>ภาพละเอียด</value>
+  </data>
+  <data name="儿童" xml:space="preserve">
+    <value>เด็ก</value>
+  </data>
+  <data name="儿童价" xml:space="preserve">
+    <value>ราคาเด็ก</value>
+  </data>
+  <data name="元人" xml:space="preserve">
+    <value>ราคาต่อคน</value>
+  </data>
+  <data name="公司名称" xml:space="preserve">
+    <value>ชื่อบริษัท</value>
+  </data>
+  <data name="公告" xml:space="preserve">
+    <value>ข่าวกลาง</value>
+  </data>
+  <data name="关闭" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="其他费用" xml:space="preserve">
+    <value>ค่าใช้จ่ายอื่น ๆ</value>
+  </data>
+  <data name="内宾" xml:space="preserve">
+    <value>ปฏิกิริยา</value>
+  </data>
+  <data name="减" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
+  <data name="出团确认单" xml:space="preserve">
+    <value>ใบยืนยันการเดินทาง</value>
+  </data>
+  <data name="出团通知书" xml:space="preserve">
+    <value>ใบเตรียมตัวเดินทาง</value>
+  </data>
+  <data name="删除" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="删除成功" xml:space="preserve">
+    <value>ประสบความสำเร็จที่ถูกลบ</value>
+  </data>
+  <data name="删除询价" xml:space="preserve">
+    <value>ยกเลิกการสอบถาม</value>
+  </data>
+  <data name="删除附件" xml:space="preserve">
+    <value>ลบสิ่งที่แนบมา</value>
+  </data>
+  <data name="加" xml:space="preserve">
+    <value>บวก</value>
+  </data>
+  <data name="单价" xml:space="preserve">
+    <value>ราคาต่อหน่วย</value>
+  </data>
+  <data name="单房差" xml:space="preserve">
+    <value>พักห้องเดี่ยว เพิ่มราคา</value>
+  </data>
+  <data name="县区" xml:space="preserve">
+    <value>มณฑล</value>
+  </data>
+  <data name="参考菜单" xml:space="preserve">
+    <value>เลือกเมนู</value>
+  </data>
+  <data name="发送失败" xml:space="preserve">
+    <value>การส่งล้มเหลว</value>
+  </data>
+  <data name="发送成功" xml:space="preserve">
+    <value>ส่งสำเร็จ</value>
+  </data>
+  <data name="发送邮件" xml:space="preserve">
+    <value>ส่งอีเมล์</value>
+  </data>
+  <data name="取消" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="取消原因" xml:space="preserve">
+    <value>เหตุผลในการยกเลิก</value>
+  </data>
+  <data name="取消报价" xml:space="preserve">
+    <value>อ้างการยกเลิก</value>
+  </data>
+  <data name="只能选择一个县区" xml:space="preserve">
+    <value>สามารถเลือกหนึ่ง</value>
+  </data>
+  <data name="只能选择一个城市" xml:space="preserve">
+    <value>เลือกได้เมืองเดียวเท่านั้น</value>
+  </data>
+  <data name="只能选择一行数据进行修改" xml:space="preserve">
+    <value>เลือกเฉพาะแถวของข้อมูลที่จะแก้ไข</value>
+  </data>
+  <data name="合计金额" xml:space="preserve">
+    <value>ราคารวม</value>
+  </data>
+  <data name="同行价" xml:space="preserve">
+    <value>ราคาส่ง</value>
+  </data>
+  <data name="咨询时间" xml:space="preserve">
+    <value>สอบถามเวลา</value>
+  </data>
+  <data name="因当地法律或其他原因不能解析给出地址" xml:space="preserve">
+    <value>The geocode for the given address or the route for the given directions query cannot be returned due to legal or contractual reasons.</value>
+  </data>
+  <data name="团号" xml:space="preserve">
+    <value>รหัสกรุ๊ป</value>
+  </data>
+  <data name="团型" xml:space="preserve">
+    <value>ประเภทกรุ๊ป</value>
+  </data>
+  <data name="团队" xml:space="preserve">
+    <value>ทีม</value>
+  </data>
+  <data name="国家" xml:space="preserve">
+    <value>ประเทศ</value>
+  </data>
+  <data name="国家地区" xml:space="preserve">
+    <value>ตำแหน่งประเทศ</value>
+  </data>
+  <data name="国籍" xml:space="preserve">
+    <value>สัญชาติ</value>
+  </data>
+  <data name="图片删除链接" xml:space="preserve">
+    <value>/images/fx-images/shanchu-t.gif</value>
+  </data>
+  <data name="图片插入链接" xml:space="preserve">
+    <value>/images/fx-images/charu-t.gif</value>
+  </data>
+  <data name="图片搜索链接" xml:space="preserve">
+    <value>/images/fx-images/sousuo-t.gif</value>
+  </data>
+  <data name="图片添加链接" xml:space="preserve">
+    <value>/images/fx-images/tianjia-t.gif</value>
+  </data>
+  <data name="图片选用链接" xml:space="preserve">
+    <value>/images/fx-images/xuanyong-t.gif</value>
+  </data>
+  <data name="地图" xml:space="preserve">
+    <value>แผนที่</value>
+  </data>
+  <data name="城市" xml:space="preserve">
+    <value>เมือง</value>
+  </data>
+  <data name="增加日程" xml:space="preserve">
+    <value>เพิ่มวัน</value>
+  </data>
+  <data name="备注" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="外宾" xml:space="preserve">
+    <value>แขกต่างประเทศ</value>
+  </data>
+  <data name="天" xml:space="preserve">
+    <value>วัน</value>
+  </data>
+  <data name="天数" xml:space="preserve">
+    <value>จำนวนวัน</value>
+  </data>
+  <data name="如不修改请置空" xml:space="preserve">
+    <value>ถ้าไม่แก้ไขปล่องช่องว่าง</value>
+  </data>
+  <data name="字体" xml:space="preserve">
+    <value>แบบตัวหนังสือ</value>
+  </data>
+  <data name="客源单位" xml:space="preserve">
+    <value>หน่วยที่มา</value>
+  </data>
+  <data name="宾客类型" xml:space="preserve">
+    <value>ประเภทลูกค้า</value>
+  </data>
+  <data name="密码" xml:space="preserve">
+    <value>รหัส</value>
+  </data>
+  <data name="密码不能为空" xml:space="preserve">
+    <value>ต้องกรอกรหัส</value>
+  </data>
+  <data name="密码修改失败" xml:space="preserve">
+    <value>เปลี่ยนรหัสไม่สำเร็จ</value>
+  </data>
+  <data name="密码修改成功" xml:space="preserve">
+    <value>เปลี่ยนรหัสสำเร็จ ดาวน์โหลดอยู่…</value>
+  </data>
+  <data name="导入类库是指定的密钥有误" xml:space="preserve">
+    <value>The given key is either invalid or does not match the domain for which it was given.</value>
+  </data>
+  <data name="导出" xml:space="preserve">
+    <value>ส่งออก</value>
+  </data>
+  <data name="小费" xml:space="preserve">
+    <value>ทิป</value>
+  </data>
+  <data name="小费名称" xml:space="preserve">
+    <value>รายการค่าทิป</value>
+  </data>
+  <data name="已付金额" xml:space="preserve">
+    <value>ชำระแล้ว</value>
+  </data>
+  <data name="已经报价成功的数据不允许修改" xml:space="preserve">
+    <value>แล้วเสนอข้อมูลที่ประสบความสำเร็จไม่สามารถแก้ไขได้</value>
+  </data>
+  <data name="已结清" xml:space="preserve">
+    <value>ชำระแล้ว</value>
+  </data>
+  <data name="已调整至最大字体" xml:space="preserve">
+    <value>แบบตัวหนังสือใหญ่สุดแล้ว</value>
+  </data>
+  <data name="已调整至最小字体" xml:space="preserve">
+    <value>แบบตัวหนังสือเล็กสุดแล้ว</value>
+  </data>
+  <data name="平季价格" xml:space="preserve">
+    <value>ไตรมาสที่แบนราคา</value>
+  </data>
+  <data name="应付金额" xml:space="preserve">
+    <value>ยอดเงินชำระ</value>
+  </data>
+  <data name="开始时间" xml:space="preserve">
+    <value>เวลาเริ่ม</value>
+  </data>
+  <data name="成人" xml:space="preserve">
+    <value>ผู้ใหญ่</value>
+  </data>
+  <data name="成人价" xml:space="preserve">
+    <value>ราคาผู้ใหญ่</value>
+  </data>
+  <data name="我的订单" xml:space="preserve">
+    <value>สั่งซื้อสินค้า</value>
+  </data>
+  <data name="或" xml:space="preserve">
+    <value>หรือ</value>
+  </data>
+  <data name="截止时间" xml:space="preserve">
+    <value>สิ้นสุดเวลา</value>
+  </data>
+  <data name="打印" xml:space="preserve">
+    <value>สั่งพิมพ์</value>
+  </data>
+  <data name="打印设置" xml:space="preserve">
+    <value>ตั้งระบบส่งพิมพ์</value>
+  </data>
+  <data name="打印设置失败" xml:space="preserve">
+    <value>สั่งพิมพ์ไม่สำเร็จ</value>
+  </data>
+  <data name="打印设置成功" xml:space="preserve">
+    <value>สั่งพิมพ์สำเร็จ ดาวน์โหลดอยู่...</value>
+  </data>
+  <data name="报价单" xml:space="preserve">
+    <value>ใบเสนอราคา</value>
+  </data>
+  <data name="报价备注" xml:space="preserve">
+    <value>หมายเหตุราคา</value>
+  </data>
+  <data name="报价成功" xml:space="preserve">
+    <value>คำคมความสำเร็จ</value>
+  </data>
+  <data name="报价状态" xml:space="preserve">
+    <value>สถานะการแจ้งราคา</value>
+  </data>
+  <data name="抵达城市" xml:space="preserve">
+    <value>วันที่เข้าเมือง</value>
+  </data>
+  <data name="抵达日期" xml:space="preserve">
+    <value>วันถึงที่หมาย</value>
+  </data>
+  <data name="提交中" xml:space="preserve">
+    <value>ทำตามคำสั่ง…</value>
+  </data>
+  <data name="插入" xml:space="preserve">
+    <value>เพิ่มเติม</value>
+  </data>
+  <data name="搜索" xml:space="preserve">
+    <value>ค้นหา</value>
+  </data>
+  <data name="操作" xml:space="preserve">
+    <value>คำสั่ง</value>
+  </data>
+  <data name="操作失败" xml:space="preserve">
+    <value>ไม่สำเร็จ</value>
+  </data>
+  <data name="收客计划" xml:space="preserve">
+    <value>ปิดแผน</value>
+  </data>
+  <data name="散客" xml:space="preserve">
+    <value>พอดี</value>
+  </data>
+  <data name="新增成功" xml:space="preserve">
+    <value>เพิ่มสำเร็จ</value>
+  </data>
+  <data name="新增询价" xml:space="preserve">
+    <value>สอบถามเพิ่มเติมพร้อมราคา</value>
+  </data>
+  <data name="无法删除已经报价成功的数据" xml:space="preserve">
+    <value>ไม่สามารถลบข้อมูลที่ได้รับประสบความสำเร็จในการอ้างอิง</value>
+  </data>
+  <data name="日期" xml:space="preserve">
+    <value>วันที่</value>
+  </data>
+  <data name="早" xml:space="preserve">
+    <value>เช้า</value>
+  </data>
+  <data name="早餐" xml:space="preserve">
+    <value>อาหารเช้า</value>
+  </data>
+  <data name="旺季价格" xml:space="preserve">
+    <value>คะแนนในฤดูกาล</value>
+  </data>
+  <data name="是否删除" xml:space="preserve">
+    <value>ว่าจะลบ?</value>
+  </data>
+  <data name="是否确定发送" xml:space="preserve">
+    <value>ยืนยันตกลงส่งเมล์</value>
+  </data>
+  <data name="晚" xml:space="preserve">
+    <value>เย็น</value>
+  </data>
+  <data name="晚餐" xml:space="preserve">
+    <value>อาหารเย็น</value>
+  </data>
+  <data name="景点" xml:space="preserve">
+    <value>สถานที่ท่องเที่ยว</value>
+  </data>
+  <data name="景点名称" xml:space="preserve">
+    <value>สถานที่ท่องเที่ยว</value>
+  </data>
+  <data name="暂无数据" xml:space="preserve">
+    <value>ยังไม่มีตัวเลข</value>
+  </data>
+  <data name="最大行间距" xml:space="preserve">
+    <value>ระหว่างแถว ใหญ่สุดแล้ว</value>
+  </data>
+  <data name="最小行间距" xml:space="preserve">
+    <value>ระหว่างแถว เล็กสุดแล้ว</value>
+  </data>
+  <data name="最少保留一行" xml:space="preserve">
+    <value>ต้องเหลือแถวว่าง</value>
+  </data>
+  <data name="服务器不能正确解析你输入的地址" xml:space="preserve">
+    <value>A geocoding, directions or maximum zoom level request could not be successfully processed, yet the exact reason for the failure is not known.</value>
+  </data>
+  <data name="未付金额" xml:space="preserve">
+    <value>ยอดค้างชำระ</value>
+  </data>
+  <data name="未匹配到城市" xml:space="preserve">
+    <value>ไม่พบเมืองที่ค้นหา</value>
+  </data>
+  <data name="未报价成功" xml:space="preserve">
+    <value>ความสำเร็จไม่ยกมา</value>
+  </data>
+  <data name="未结清" xml:space="preserve">
+    <value>ค้างชำระ</value>
+  </data>
+  <data name="查看" xml:space="preserve">
+    <value>ตรวจดู</value>
+  </data>
+  <data name="查询地址未知" xml:space="preserve">
+    <value>No corresponding geographic location could be found for the specified address.</value>
+  </data>
+  <data name="查询太过频繁" xml:space="preserve">
+    <value>The given key has gone over the requests limit in the 24 hour period or has submitted too many requests in too short a period of time.</value>
+  </data>
+  <data name="查询条件不能为空" xml:space="preserve">
+    <value>The HTTP q parameter was either missing or had no value.</value>
+  </data>
+  <data name="正在加载请等待" xml:space="preserve">
+    <value>กำลังดาวน์โหลด</value>
+  </data>
+  <data name="淡季价格" xml:space="preserve">
+    <value>ราคานอกรอบ</value>
+  </data>
+  <data name="清除" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
+  <data name="特推线路" xml:space="preserve">
+    <value>เส้นทางพิเศษ</value>
+  </data>
+  <data name="状态" xml:space="preserve">
+    <value>สถานะ</value>
+  </data>
+  <data name="用户信息" xml:space="preserve">
+    <value>ข้อมุลลูกค้า</value>
+  </data>
+  <data name="用户名" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+  </data>
+  <data name="用户名不能为空" xml:space="preserve">
+    <value>ต้องกรอกรายละเอียด</value>
+  </data>
+  <data name="用户名已存在" xml:space="preserve">
+    <value>มีรายชื่อผู้ใช้แล้ว</value>
+  </data>
+  <data name="用户名或密码不正确" xml:space="preserve">
+    <value>ชื่อหรือรหัส ไม่ถูกต้อง</value>
+  </data>
+  <data name="用餐" xml:space="preserve">
+    <value>อาหาร</value>
+  </data>
+  <data name="登陆" xml:space="preserve">
+    <value>เข้าสู่</value>
+  </data>
+  <data name="省份" xml:space="preserve">
+    <value>ชื่อมณฑล</value>
+  </data>
+  <data name="离开城市" xml:space="preserve">
+    <value>วันที่ออกจากเมือง</value>
+  </data>
+  <data name="离开日期" xml:space="preserve">
+    <value>วันที่ออก</value>
+  </data>
+  <data name="第" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="简要行程单" xml:space="preserve">
+    <value>รายการย่อ</value>
+  </data>
+  <data name="系统设置" xml:space="preserve">
+    <value>ระบบติดตั้ง</value>
+  </data>
+  <data name="线路区域" xml:space="preserve">
+    <value>แบ่งเส้นทาง</value>
+  </data>
+  <data name="线路名称" xml:space="preserve">
+    <value>ชื่อเส้นทาง</value>
+  </data>
+  <data name="结算中心" xml:space="preserve">
+    <value>ศูนย์บัญชี</value>
+  </data>
+  <data name="结算价" xml:space="preserve">
+    <value>ราคาจ่าย</value>
+  </data>
+  <data name="给出的两地之间无路可走或我们的现有的数据中缺少路线规划路线" xml:space="preserve">
+    <value>The GDirections object could not compute directions between the points mentioned in the query.</value>
+  </data>
+  <data name="编号" xml:space="preserve">
+    <value>ลำดับ</value>
+  </data>
+  <data name="自费项目" xml:space="preserve">
+    <value>รายการเพิ่มพิเศษ</value>
+  </data>
+  <data name="航班时间" xml:space="preserve">
+    <value>ไฟล์ทบิน / เวลา</value>
+  </data>
+  <data name="菜单" xml:space="preserve">
+    <value>รายการอาหาร</value>
+  </data>
+  <data name="行程中城市不能为空" xml:space="preserve">
+    <value>รายการต้องมีชื่อเมือง</value>
+  </data>
+  <data name="行程亮点" xml:space="preserve">
+    <value>จุดเด่นรายการ</value>
+  </data>
+  <data name="行程单" xml:space="preserve">
+    <value>ใบรายการท่องเที่ยว</value>
+  </data>
+  <data name="行程备注" xml:space="preserve">
+    <value>หมายเหตุรายการ</value>
+  </data>
+  <data name="行程安排" xml:space="preserve">
+    <value>รายการ</value>
+  </data>
+  <data name="行间距" xml:space="preserve">
+    <value>ระหว่างแถว</value>
+  </data>
+  <data name="计调安排确认单" xml:space="preserve">
+    <value>ใบยืนยันรายการ</value>
+  </data>
+  <data name="订单状态" xml:space="preserve">
+    <value>สถานะการสั่งซื้อ</value>
+  </data>
+  <data name="记住用户名" xml:space="preserve">
+    <value>จำรหัส</value>
+  </data>
+  <data name="询价中心" xml:space="preserve">
+    <value>ศูนย์สอบถามราคา</value>
+  </data>
+  <data name="询价日期" xml:space="preserve">
+    <value>วันที่สอบถามราคา</value>
+  </data>
+  <data name="询价日期不能为空" xml:space="preserve">
+    <value>เช็คราคาต้องระบุวันที่</value>
+  </data>
+  <data name="询价编号" xml:space="preserve">
+    <value>รหัสการสอบถามราคา</value>
+  </data>
+  <data name="详细行程" xml:space="preserve">
+    <value>รายละเอียดรายการ</value>
+  </data>
+  <data name="详细行程单" xml:space="preserve">
+    <value>รายละเอียดของรายการ</value>
+  </data>
+  <data name="语言" xml:space="preserve">
+    <value>ภาษา</value>
+  </data>
+  <data name="请先选择国家" xml:space="preserve">
+    <value>โปรดเลือกประเทศ</value>
+  </data>
+  <data name="请先选择城市" xml:space="preserve">
+    <value>กรุณาเลือกเมือง</value>
+  </data>
+  <data name="请输入抵达日期" xml:space="preserve">
+    <value>ระบุวันที่ถึงจุดหมาย</value>
+  </data>
+  <data name="请输入最大成人数" xml:space="preserve">
+    <value>ระบุจำนวนคน</value>
+  </data>
+  <data name="请输入最小成人数" xml:space="preserve">
+    <value>ระบุจำนวนเด็ก</value>
+  </data>
+  <data name="请输入正确的天数" xml:space="preserve">
+    <value>ระบุจำนวนวัน</value>
+  </data>
+  <data name="请输入正确的赠送金额" xml:space="preserve">
+    <value>ระบุมูลค่าของแถม</value>
+  </data>
+  <data name="请输入正确的邮箱地址" xml:space="preserve">
+    <value>กรอกอีเมล์ที่ถูกต้อง</value>
+  </data>
+  <data name="请输入正确的金额" xml:space="preserve">
+    <value>ระบุจำนวนเงินที่ถูกต้อง</value>
+  </data>
+  <data name="请输入离开日期" xml:space="preserve">
+    <value>ระบุวันที่สิ้นสุดการเดินทาง</value>
+  </data>
+  <data name="请输入线路名称" xml:space="preserve">
+    <value>ระบุเส้นทางท่องเที่ยว</value>
+  </data>
+  <data name="请选择" xml:space="preserve">
+    <value>เลือกรายการ</value>
+  </data>
+  <data name="请选择一行数据" xml:space="preserve">
+    <value>เลือกแถวของข้อมูล</value>
+  </data>
+  <data name="请选择供应商" xml:space="preserve">
+    <value>เลือกผู้ค้า</value>
+  </data>
+  <data name="请选择国家" xml:space="preserve">
+    <value>โปรดเลือกประเทศ</value>
+  </data>
+  <data name="请选择城市" xml:space="preserve">
+    <value>เลือกเมือง</value>
+  </data>
+  <data name="请选择线路区域" xml:space="preserve">
+    <value>เลือกเส้นทางท่องเที่ยว</value>
+  </data>
+  <data name="购物" xml:space="preserve">
+    <value>ช็อปปิ้ง</value>
+  </data>
+  <data name="购物点" xml:space="preserve">
+    <value>จุดช็อปปิ้ง</value>
+  </data>
+  <data name="费用结算单" xml:space="preserve">
+    <value>ใบค่าใช้จ่าย</value>
+  </data>
+  <data name="赠送" xml:space="preserve">
+    <value>รายการแถม</value>
+  </data>
+  <data name="路线" xml:space="preserve">
+    <value>เส้นทาง</value>
+  </data>
+  <data name="路线规划查询条件设定有误" xml:space="preserve">
+    <value>A directions request could not be successfully parsed.</value>
+  </data>
+  <data name="选择" xml:space="preserve">
+    <value>เลือก</value>
+  </data>
+  <data name="选择供应商" xml:space="preserve">
+    <value>การเลือกซัพพลายเออร์</value>
+  </data>
+  <data name="选择城市" xml:space="preserve">
+    <value>เลือกเมือง</value>
+  </data>
+  <data name="选择景点" xml:space="preserve">
+    <value>เลือกสถานที่ท่องเที่ยว</value>
+  </data>
+  <data name="选择景点价格" xml:space="preserve">
+    <value>เลือกที่เที่ยวพร้อมราคา</value>
+  </data>
+  <data name="选择物品" xml:space="preserve">
+    <value>เลือกสินค้า</value>
+  </data>
+  <data name="选择菜单" xml:space="preserve">
+    <value>เลือกรายการอาหาร</value>
+  </data>
+  <data name="选择酒店" xml:space="preserve">
+    <value>เลือกโรงแรม</value>
+  </data>
+  <data name="选择餐馆" xml:space="preserve">
+    <value>เลือกห้องอาหาร</value>
+  </data>
+  <data name="选用" xml:space="preserve">
+    <value>เลือกใช้</value>
+  </data>
+  <data name="邮件接收方地址" xml:space="preserve">
+    <value>ที่ร้บอีเมล์</value>
+  </data>
+  <data name="酒店" xml:space="preserve">
+    <value>โรงแรม</value>
+  </data>
+  <data name="酒店名称" xml:space="preserve">
+    <value>ชื่อโรงแรม</value>
+  </data>
+  <data name="酒店星级要求" xml:space="preserve">
+    <value>เลือกระดับโรงแรม</value>
+  </data>
+  <data name="重复密码" xml:space="preserve">
+    <value>รหัสยืนยัน</value>
+  </data>
+  <data name="金额" xml:space="preserve">
+    <value>ยอดเงิน</value>
+  </data>
+  <data name="隐藏TO" xml:space="preserve">
+    <value>เก็บ TO</value>
+  </data>
+  <data name="隐藏表格" xml:space="preserve">
+    <value>เก็บตาราง</value>
+  </data>
+  <data name="隐藏页眉" xml:space="preserve">
+    <value>เก็บหัวกระดาษ</value>
+  </data>
+  <data name="隐藏页脚" xml:space="preserve">
+    <value>เก็บกระดาษล่าง</value>
+  </data>
+  <data name="页眉图片" xml:space="preserve">
+    <value>หัวกระดาษ</value>
+  </data>
+  <data name="页脚图片" xml:space="preserve">
+    <value>ท้ายกระดาษ</value>
+  </data>
+  <data name="项目" xml:space="preserve">
+    <value>หัวข้อ</value>
+  </data>
+  <data name="领队" xml:space="preserve">
+    <value>หัวหน้าทัวร์</value>
+  </data>
+  <data name="风味餐" xml:space="preserve">
+    <value>เมนูพิเศษ</value>
+  </data>
+  <data name="餐厅" xml:space="preserve">
+    <value>ห้องอาหาร</value>
+  </data>
+  <data name="首页" xml:space="preserve">
+    <value>หน้าแรก</value>
+  </data>
+  <data name="验证码" xml:space="preserve">
+    <value>รหัสยืนยัน</value>
+  </data>
+</root>

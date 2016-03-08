@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0394580C-EC01-408C-A6C9-655775A38E5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EyouSoft.DAL</RootNamespace>
+    <AssemblyName>EyouSoft.DAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\EyouSoft.DAL.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EyouSoft.Document\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComStructure\DComAccount.cs" />
+    <Compile Include="ComStructure\DComArea.cs" />
+    <Compile Include="ComStructure\DComAttach.cs" />
+    <Compile Include="ComStructure\DComCarLocation.cs" />
+    <Compile Include="ComStructure\DComCarPlace.cs" />
+    <Compile Include="ComStructure\DComCarType.cs" />
+    <Compile Include="ComStructure\DComCity.cs" />
+    <Compile Include="ComStructure\DComDepartment.cs" />
+    <Compile Include="ComStructure\DComInsurance.cs" />
+    <Compile Include="ComStructure\DComLev.cs" />
+    <Compile Include="ComStructure\DComMemberType.cs" />
+    <Compile Include="ComStructure\DCompany.cs" />
+    <Compile Include="ComStructure\DComPayment.cs" />
+    <Compile Include="ComStructure\DComProject.cs" />
+    <Compile Include="ComStructure\DComRole.cs" />
+    <Compile Include="ComStructure\DComSetting.cs" />
+    <Compile Include="ComStructure\DComShip.cs" />
+    <Compile Include="ComStructure\DComStand.cs" />
+    <Compile Include="ComStructure\DComUser.cs" />
+    <Compile Include="ComStructure\DDaoYou.cs" />
+    <Compile Include="ComStructure\DTourNoOptionCode.cs" />
+    <Compile Include="ConStructure\DContractNum.cs" />
+    <Compile Include="CrmStructure\DCrm.cs" />
+    <Compile Include="CrmStructure\DCrmComplaint.cs" />
+    <Compile Include="CrmStructure\DCrmLinkman.cs" />
+    <Compile Include="CrmStructure\DCrmMember.cs" />
+    <Compile Include="CrmStructure\DCrmVisit.cs" />
+    <Compile Include="CrmStructure\DCrmVisitDetail.cs" />
+    <Compile Include="DQC\DCarTeamQC.cs" />
+    <Compile Include="DQC\DTourServiceQC.cs" />
+    <Compile Include="FinStructure\DDaiShou.cs" />
+    <Compile Include="FinStructure\DKis.cs" />
+    <Compile Include="GovStructure\DDocuments.cs" />
+    <Compile Include="HGysStructure\DGys.cs" />
+    <Compile Include="HGysStructure\DJiaGe.cs" />
+    <Compile Include="HGysStructure\DSiJi.cs" />
+    <Compile Include="HGysStructure\DWuPin.cs" />
+    <Compile Include="HGysStructure\DYuCunKuan.cs" />
+    <Compile Include="HPlanStructure\DPlan.cs" />
+    <Compile Include="HTourStructure\DBianGeng.cs" />
+    <Compile Include="HTourStructure\DQuote.cs" />
+    <Compile Include="HTourStructure\DTour.cs" />
+    <Compile Include="HTourStructure\DTourOrder.cs" />
+    <Compile Include="PlanStructure\DJiDiaoAnPaiBianGeng.cs" />
+    <Compile Include="SmsStructure\DDaoRuLxr.cs" />
+    <Compile Include="SmsStructure\DSmsRenWu.cs" />
+    <Compile Include="SmsStructure\DSmsDetail.cs" />
+    <Compile Include="SmsStructure\DSmsPhrase.cs" />
+    <Compile Include="SmsStructure\DSmsSetting.cs" />
+    <Compile Include="SmsStructure\DSmsTourTimeTask.cs" />
+    <Compile Include="SysStructure\DGeography.cs" />
+    <Compile Include="SysStructure\DSys.cs" />
+    <Compile Include="SysStructure\DSysCarType.cs" />
+    <Compile Include="SysStructure\DSysLogHandle.cs" />
+    <Compile Include="SysStructure\DSysOptionConfig.cs" />
+    <Compile Include="SysStructure\DSysRoom.cs" />
+    <Compile Include="TongJiStructure\DDaoYouYeJi.cs" />
+    <Compile Include="TongJiStructure\DLiRun.cs" />
+    <Compile Include="TongJiStructure\DRenShu.cs" />
+    <Compile Include="TongJiStructure\DRenTian.cs" />
+    <Compile Include="TongJiStructure\DRuJing.cs" />
+    <Compile Include="TourStructure\DQuote.cs" />
+    <Compile Include="FinStructure\DFinance.cs" />
+    <Compile Include="GovStructure\DArchives.cs" />
+    <Compile Include="GovStructure\DAttendance.cs" />
+    <Compile Include="GovStructure\DContract.cs" />
+    <Compile Include="GovStructure\DMeeting.cs" />
+    <Compile Include="GovStructure\DGood.cs" />
+    <Compile Include="GovStructure\DGovFilePersonnel.cs" />
+    <Compile Include="GovStructure\DNotice.cs" />
+    <Compile Include="GovStructure\DOpinion.cs" />
+    <Compile Include="GovStructure\DPosition.cs" />
+    <Compile Include="GovStructure\DRegulation.cs" />
+    <Compile Include="GovStructure\DTrain.cs" />
+    <Compile Include="IndStructure\DIndividual.cs" />
+    <Compile Include="PlanStructure\DPlan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="StatStructure\DStatistics.cs" />
+    <Compile Include="TourStructure\DSingleService.cs" />
+    <Compile Include="TourStructure\DTour.cs" />
+    <Compile Include="TourStructure\DTourOrder.cs" />
+    <Compile Include="TourStructure\DTourOrderChange.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EyouSoft.IDAL\EyouSoft.IDAL.csproj">
+      <Project>{C596872E-9448-4E1F-8D4C-0005873ED428}</Project>
+      <Name>EyouSoft.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Model\EyouSoft.Model.csproj">
+      <Project>{41BB31BF-A4C6-4994-AFBA-B559034010C7}</Project>
+      <Name>EyouSoft.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EyouSoft.Toolkit\EyouSoft.Toolkit.csproj">
+      <Project>{99A84C7E-8F77-45C7-865E-C84478BC1EDC}</Project>
+      <Name>EyouSoft.Toolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

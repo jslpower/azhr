@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSmsAccountYuE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSmsAccountYuEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSmsAccountYuEResult" type="tns:MSmsAccountBase" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MSmsAccountBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppSecret" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SmsCenterApiSoapHeader" type="tns:SmsCenterApiSoapHeader" />
+      <s:complexType name="SmsCenterApiSoapHeader">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ApiSoapHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ApiSoapHeader" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SecretKey" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="RechargeByCostomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="tns:MSmsBankCharge" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MSmsBankCharge">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MSmsAccountBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ChargeId" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ChargeAmount" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ChargeStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="RealAmount" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChargeComName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChargeName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChargeTelephone" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IssueTime" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="SysType" type="tns:SystemType" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShenHeBeiZhu" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ShenHeRen" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ShenHeShiJian" nillable="true" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="ChargeStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="未审核" />
+          <s:enumeration value="通过" />
+          <s:enumeration value="不通过" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SystemType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="峡州" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="RechargeByCostomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RechargeByCostomerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSmsBankCharge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordCount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="queryModel" type="tns:MQuerySmsBankCharge" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MQuerySmsBankCharge">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccountId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppSecret" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" nillable="true" type="tns:ChargeStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeComName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSmsBankChargeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSmsBankChargeResult" type="tns:ArrayOfMSmsBankCharge" />
+            <s:element minOccurs="1" maxOccurs="1" name="recordCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMSmsBankCharge">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MSmsBankCharge" nillable="true" type="tns:MSmsBankCharge" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidateSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="smsPlan" type="tns:MSmsPlan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MSmsPlan">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PlanId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Channel" type="tns:Channel" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSend" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="tns:ArrayOfMSmsNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="SmsAccount" type="tns:MSmsAccountBase" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Channel">
+        <s:restriction base="s:string">
+          <s:enumeration value="通用通道" />
+          <s:enumeration value="广告通道" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfMSmsNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MSmsNumber" nillable="true" type="tns:MSmsNumber" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MSmsNumber">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:MobileType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="MobileType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Mobiel" />
+          <s:enumeration value="Phs" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ValidateSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateSendResult" type="tns:MSendResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MSendResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsSucceed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountFee" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountMoney" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MobileNumberCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhsNumberCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuccessCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhsSuccessCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FactCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PhsFactCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SmsCenterPlanId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="smsPlan" type="tns:MSmsPlan" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMessageResult" type="tns:MSendResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSmsAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sysType" type="tns:SystemType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSmsAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateSmsAccountResult" type="tns:MRetCreateAccount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MRetCreateAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Account" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppSecret" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSmsAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="tns:MSmsAccountBase" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSmsAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSmsAccountResult" type="tns:MSmsAccount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MSmsAccount">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:MSmsAccountBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="SysType" type="tns:SystemType" />
+              <s:element minOccurs="1" maxOccurs="1" name="IssueTime" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="SmsUnitPrice" type="tns:ArrayOfMSmsChannelInfo" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfMSmsChannelInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MSmsChannelInfo" nillable="true" type="tns:MSmsChannelInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MSmsChannelInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Cnannel" type="tns:Channel" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSmsChannels">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSmsChannelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSmsChannelsResult" type="tns:ArrayOfMSmsChannelInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSmsUnitPrices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="tns:MSmsAccountBase" />
+            <s:element minOccurs="0" maxOccurs="1" name="items" type="tns:ArrayOfMSmsChannelInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSmsUnitPricesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetSmsUnitPricesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SmsCenterWebmasterApiSoapHeader" type="tns:SmsCenterWebmasterApiSoapHeader" />
+      <s:complexType name="SmsCenterWebmasterApiSoapHeader">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ApiSoapHeader" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SetSmsBankRechargeStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="info" type="tns:MCheckSmsBankCharge" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MCheckSmsBankCharge">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ChargeStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="RealAmount" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShenHeRen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShenHeBeiZhu" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShenHeShiJian" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetSmsBankRechargeStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetSmsBankRechargeStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSmsAccountYuESoapIn">
+    <wsdl:part name="parameters" element="tns:GetSmsAccountYuE" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsAccountYuESoapOut">
+    <wsdl:part name="parameters" element="tns:GetSmsAccountYuEResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsAccountYuESmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="RechargeByCostomerSoapIn">
+    <wsdl:part name="parameters" element="tns:RechargeByCostomer" />
+  </wsdl:message>
+  <wsdl:message name="RechargeByCostomerSoapOut">
+    <wsdl:part name="parameters" element="tns:RechargeByCostomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="RechargeByCostomerSmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsBankChargeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSmsBankCharge" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsBankChargeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSmsBankChargeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsBankChargeSmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="ValidateSendSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateSend" />
+  </wsdl:message>
+  <wsdl:message name="ValidateSendSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateSendSmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMessage" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMessageSmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreateSmsAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSmsAccount" />
+  </wsdl:message>
+  <wsdl:message name="CreateSmsAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSmsAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSmsAccountSmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSmsAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSmsAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsAccountSmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsChannelsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSmsChannels" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsChannelsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSmsChannelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSmsChannelsSmsCenterApiSoapHeader">
+    <wsdl:part name="SmsCenterApiSoapHeader" element="tns:SmsCenterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetSmsUnitPricesSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSmsUnitPrices" />
+  </wsdl:message>
+  <wsdl:message name="SetSmsUnitPricesSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSmsUnitPricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSmsUnitPricesSmsCenterWebmasterApiSoapHeader">
+    <wsdl:part name="SmsCenterWebmasterApiSoapHeader" element="tns:SmsCenterWebmasterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="SetSmsBankRechargeStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSmsBankRechargeStatus" />
+  </wsdl:message>
+  <wsdl:message name="SetSmsBankRechargeStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSmsBankRechargeStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSmsBankRechargeStatusSmsCenterWebmasterApiSoapHeader">
+    <wsdl:part name="SmsCenterWebmasterApiSoapHeader" element="tns:SmsCenterWebmasterApiSoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="SmsCenterSoap">
+    <wsdl:operation name="GetSmsAccountYuE">
+      <wsdl:input message="tns:GetSmsAccountYuESoapIn" />
+      <wsdl:output message="tns:GetSmsAccountYuESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RechargeByCostomer">
+      <wsdl:input message="tns:RechargeByCostomerSoapIn" />
+      <wsdl:output message="tns:RechargeByCostomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsBankCharge">
+      <wsdl:input message="tns:GetSmsBankChargeSoapIn" />
+      <wsdl:output message="tns:GetSmsBankChargeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSend">
+      <wsdl:input message="tns:ValidateSendSoapIn" />
+      <wsdl:output message="tns:ValidateSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <wsdl:input message="tns:SendMessageSoapIn" />
+      <wsdl:output message="tns:SendMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSmsAccount">
+      <wsdl:input message="tns:CreateSmsAccountSoapIn" />
+      <wsdl:output message="tns:CreateSmsAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsAccount">
+      <wsdl:input message="tns:GetSmsAccountSoapIn" />
+      <wsdl:output message="tns:GetSmsAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsChannels">
+      <wsdl:input message="tns:GetSmsChannelsSoapIn" />
+      <wsdl:output message="tns:GetSmsChannelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSmsUnitPrices">
+      <wsdl:input message="tns:SetSmsUnitPricesSoapIn" />
+      <wsdl:output message="tns:SetSmsUnitPricesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSmsBankRechargeStatus">
+      <wsdl:input message="tns:SetSmsBankRechargeStatusSoapIn" />
+      <wsdl:output message="tns:SetSmsBankRechargeStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmsCenterSoap" type="tns:SmsCenterSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSmsAccountYuE">
+      <soap:operation soapAction="http://tempuri.org/GetSmsAccountYuE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSmsAccountYuESmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeByCostomer">
+      <soap:operation soapAction="http://tempuri.org/RechargeByCostomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RechargeByCostomerSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsBankCharge">
+      <soap:operation soapAction="http://tempuri.org/GetSmsBankCharge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSmsBankChargeSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSend">
+      <soap:operation soapAction="http://tempuri.org/ValidateSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValidateSendSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendMessageSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSmsAccount">
+      <soap:operation soapAction="http://tempuri.org/CreateSmsAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateSmsAccountSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsAccount">
+      <soap:operation soapAction="http://tempuri.org/GetSmsAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSmsAccountSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsChannels">
+      <soap:operation soapAction="http://tempuri.org/GetSmsChannels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetSmsChannelsSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmsUnitPrices">
+      <soap:operation soapAction="http://tempuri.org/SetSmsUnitPrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetSmsUnitPricesSmsCenterWebmasterApiSoapHeader" part="SmsCenterWebmasterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmsBankRechargeStatus">
+      <soap:operation soapAction="http://tempuri.org/SetSmsBankRechargeStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SetSmsBankRechargeStatusSmsCenterWebmasterApiSoapHeader" part="SmsCenterWebmasterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SmsCenterSoap12" type="tns:SmsCenterSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSmsAccountYuE">
+      <soap12:operation soapAction="http://tempuri.org/GetSmsAccountYuE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSmsAccountYuESmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechargeByCostomer">
+      <soap12:operation soapAction="http://tempuri.org/RechargeByCostomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RechargeByCostomerSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsBankCharge">
+      <soap12:operation soapAction="http://tempuri.org/GetSmsBankCharge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSmsBankChargeSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateSend">
+      <soap12:operation soapAction="http://tempuri.org/ValidateSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValidateSendSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMessage">
+      <soap12:operation soapAction="http://tempuri.org/SendMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendMessageSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSmsAccount">
+      <soap12:operation soapAction="http://tempuri.org/CreateSmsAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateSmsAccountSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsAccount">
+      <soap12:operation soapAction="http://tempuri.org/GetSmsAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSmsAccountSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSmsChannels">
+      <soap12:operation soapAction="http://tempuri.org/GetSmsChannels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetSmsChannelsSmsCenterApiSoapHeader" part="SmsCenterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmsUnitPrices">
+      <soap12:operation soapAction="http://tempuri.org/SetSmsUnitPrices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetSmsUnitPricesSmsCenterWebmasterApiSoapHeader" part="SmsCenterWebmasterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSmsBankRechargeStatus">
+      <soap12:operation soapAction="http://tempuri.org/SetSmsBankRechargeStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SetSmsBankRechargeStatusSmsCenterWebmasterApiSoapHeader" part="SmsCenterWebmasterApiSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmsCenter">
+    <wsdl:port name="SmsCenterSoap" binding="tns:SmsCenterSoap">
+      <soap:address location="http://localhost:2757/SmsCenter.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SmsCenterSoap12" binding="tns:SmsCenterSoap12">
+      <soap12:address location="http://localhost:2757/SmsCenter.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
